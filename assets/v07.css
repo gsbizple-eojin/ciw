@@ -1,0 +1,197 @@
+/* Figma (작업용) v0.7: 변경된 세로형 화면만 적용. 기존 팝업 배경은 v0.6 유지. */
+.v07-red{background:#d10a2c!important;color:#fff!important;border:1px solid #d9dee5;border-radius:16px;font-weight:800}
+.v07-intro,.v07-course,.v07-payment,.v07-welcome,.v07-admin{position:absolute;inset:0;width:1080px;height:1920px;color:#15171b;background:#fff;font-family:Pretendard,'Noto Sans KR',sans-serif}
+.v07-intro{background:#f0f2f5}
+.v07-intro>.course-status-bar,.v07-welcome>.course-status-bar{position:absolute;left:0;top:0;width:1080px;height:80px}
+.v07-intro-body{position:absolute;left:0;top:120px;width:1080px;height:1632px;padding:100px 56px 56px;display:flex;flex-direction:column;align-items:center;gap:56px;overflow:hidden}
+.v07-intro-body>header{text-align:center;width:968px}
+.v07-intro-body>header p{font-size:36px;color:#747d89;height:61px;margin:0;line-height:30px}
+.v07-intro-body h2{font-size:60px;font-weight:600;line-height:64px;margin:0}
+.v07-intro-body>header>span{display:block;font-size:28px;line-height:34px;margin-top:31px;height:34px;color:#333}
+.v07-vehicles{display:flex;flex-direction:column;align-items:center;gap:40px}
+.v07-vehicle{width:760px;height:372px;padding:24px 40px 40px;background:#fff;border:1.5px solid #d9d9d9;box-shadow:0 4px 12px #76768e14;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#191923}
+.v07-vehicle-image{width:160px;height:160px;display:grid;place-items:center}
+.v07-vehicle-image img{width:80px;height:80px}
+.v07-vehicle strong{font-size:48px;line-height:56px}
+.v07-vehicle>span:not(.v07-vehicle-image){font-size:32px;line-height:44px;color:#686868;margin-top:4px}
+.v07-vehicle small{font-size:22px;line-height:28px;color:#686868;display:flex;align-items:end;height:43px}
+.v07-intro-qr{width:760px;display:flex;gap:40px;padding:40px 24px;background:#fff;border:0;text-align:left;color:#15171b}
+.v07-intro-qr>span:last-child{flex:1}
+.v07-intro-qr strong{display:block;font-size:36px;line-height:40px;font-weight:500}
+.v07-intro-qr>span:last-child>span{display:block;padding-top:16px;font-size:32px;line-height:44px}
+.v07-phone-qr{position:relative;display:block;flex:0 0 140px;height:140px;align-self:center}
+.v07-phone-qr>img{width:100%;height:100%;object-fit:cover}
+.v07-phone-qr>span{position:absolute;inset:0;overflow:hidden}
+.v07-phone-qr>span img{position:absolute;width:618.13%;height:1100%;left:-29.7%;top:-957.89%;max-width:none}
+.v07-course-main{position:absolute;left:0;top:700px;width:1080px;height:1220px;background:white}
+.v07-course-main>.course-status-bar{position:absolute;top:0;left:0;width:1080px;height:80px}
+.v07-course-heading{position:absolute;left:64px;top:120px;width:952px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.v07-course-heading h2{font-size:46px;line-height:55px;width:595px;margin:0;font-weight:700;letter-spacing:-1.8px}
+.v07-course-heading button{width:261px;height:82px;background:#5e636b;color:#fff;border:0;border-radius:11px;font-size:26px}
+.v07-course-cards{position:absolute;left:56px;top:234px;width:968px;display:grid;grid-template-columns:471px 471px;gap:21px 26px}
+.v07-course-cards>button{position:relative;height:345px;background:#fff;border:1px solid #858e99;border-radius:30px;color:#15171b;text-align:left;overflow:hidden;padding:36px;display:flex;flex-direction:column;justify-content:start}
+.v07-course-cards strong{font-size:46px;letter-spacing:-1.84px;line-height:55px;white-space:nowrap}
+.v07-course-cards strong small{font-size:25px;color:#858e99;letter-spacing:0}
+.v07-course-cards p{font-size:25px;line-height:41px;color:#747d89;margin:19px 0 0}
+.v07-course-cards b{position:absolute;left:0;bottom:0;width:100%;height:90px;padding:15px 36px;font-size:46px;line-height:58px;background:#d10a2c;color:#fff}
+.v07-recent{position:absolute;right:24px;top:201px;background:#fff4f6;color:#d10a2c;font-size:22px;border-radius:18px;padding:6px 18px}
+.v07-course-qr,.v07-welcome-qr{position:absolute;left:56px;top:958px;width:968px;height:133px;padding:26px 34px;display:flex;align-items:center;gap:28px;background:#fff4f6;border:2px solid #d10a2c;border-radius:24px;box-shadow:0 10px 13px #d10a2c1a;color:#15171b;text-align:left}
+.v07-course-qr .qr-mini,.v07-welcome-qr .qr-mini{flex:0 0 70px;width:70px;height:70px}
+.v07-course-qr>span:last-child,.v07-welcome-qr>span:last-child{display:flex;flex-direction:column;gap:7px}
+.v07-course-qr strong,.v07-welcome-qr strong{font-size:26px;color:#d10a2c;line-height:31px}
+.v07-course-qr>span:last-child>span,.v07-welcome-qr>span:last-child>span{font-size:22px;line-height:29px}
+.v07-course .kiosk-footer{position:absolute;left:0;top:1100px;width:1080px;height:120px;transform:none;margin:0;padding:18px 48px;display:flex;justify-content:space-between;background:#fff}
+.v07-course .footer-btn{width:200px;height:84px;font-size:26px;background:#5e636b;color:#fff;border:1px solid #d9dee5;border-radius:14px}
+.v07-course-info-dim{position:absolute;inset:780px 0 0;background:#0009}
+.v07-course-info{position:absolute;left:56px;top:812px;width:968px;padding:36px;border-radius:28px;background:#fff;box-shadow:0 20px 40px #0003;display:flex;flex-direction:column;gap:16px}
+.v07-course-info header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.v07-course-info h2{font-size:42px;margin:0;font-weight:800}
+.v07-course-info header button{width:52px;height:52px;font-size:40px;border:1px solid #d9dee5;background:#f3f5f7;border-radius:12px;color:#353a40;line-height:40px}
+.v07-course-info article{border:1px solid #d9dee5;border-radius:18px;padding:24px}
+.v07-course-info h3{font-size:34px;line-height:40px;margin:0;display:flex;align-items:center;gap:14px;font-weight:800}
+.v07-course-info h3 small{font-size:22px;color:#858e99;font-weight:700}
+.v07-course-info h3 b{margin-left:auto;color:#ed002d}
+.v07-course-info article p{background:#f3f5f7;border-radius:12px;padding:16px 18px;margin:18px 0 0;font-size:26px;line-height:36px;font-weight:700;word-break:keep-all}
+.v07-course-info>button{height:84px;margin-top:10px;font-size:36px}
+.v07-payment-status{position:absolute;left:0;top:700px;width:1080px}
+.v07-payment-summary{position:absolute;top:822px;left:74px;width:936px;height:198px;border:1px solid #a8a8a8;border-radius:26px;display:grid;grid-template-columns:452px 1fr;align-items:center;padding:28px 34px;gap:30px}
+.v07-payment-summary>div:first-child{height:139px;border-right:1px solid #d9dee5;padding-right:34px}
+.v07-payment-summary h2{font-size:28px;line-height:34px;margin:0 0 14px;font-weight:800}
+.v07-payment-summary>div:first-child p{font-size:22px;line-height:31px;margin:0;color:#747d89}
+.v07-payment-summary>div:last-child>strong{display:flex;align-items:center;justify-content:space-between;font-size:26px}
+.v07-payment-summary strong b{font-size:36px;color:#d10a2c}
+.v07-discount-line{margin:0 0 8px;font-size:22px;display:flex;justify-content:space-between;color:#747d89}
+.v07-discount-line b{font-weight:500;color:#d10a2c}
+.v07-methods{position:absolute;left:74px;width:936px}
+.v07-discounts{top:1096px}.v07-payments{top:1412px}
+.v07-methods h3{font-size:28px;line-height:34px;color:#15171b;margin:0 0 40px;font-weight:700}
+.v07-methods h3 b{font-size:24px;color:#d10a2c;margin-right:24px}
+.v07-methods>div{display:grid;gap:17px;grid-template-columns:repeat(3,1fr)}
+.v07-payments>div{grid-template-columns:repeat(2,1fr);gap:16px}
+.v07-methods button{height:174px;display:flex;flex-direction:column;gap:24px;align-items:center;justify-content:center;border:1px solid #858e99;border-radius:20px;background:white;color:#15171b;padding:20px;font-size:28px}
+.v07-payments button{height:278px}
+.v07-methods button:disabled{background:#f3f5f7;opacity:.55}
+.v07-placeholder-icon{border:1px dashed #858e99;border-radius:8px;width:62px;height:62px;display:grid;place-items:center;font-size:20px;color:#858e99}
+.v07-payment .kiosk-footer{position:absolute;top:1800px;left:0;width:1080px;height:120px;transform:none;padding:18px 48px;display:flex;justify-content:space-between;background:white}
+.v07-payment .footer-btn{width:200px;height:84px;border:1px solid #d9dee5;border-radius:14px;background:#f3f5f7;color:#15171b;font-size:26px;white-space:nowrap}
+.kiosk .v07-scan .v07-scan-warnings{margin-top:36px;text-align:center}
+.kiosk .v07-scan .v07-scan-warnings p{font-size:25px;line-height:36px;color:#15171b;margin:0}
+.kiosk .v07-scan .mobile-voucher-title{font-size:42px;line-height:54px}
+.v07-completion{position:absolute;left:0;top:780px;width:1080px;height:1140px;background:white}
+.v07-completion h2{position:absolute;left:56px;top:89px;width:968px;line-height:57px;font-size:48px;font-weight:800;text-align:center;color:#15171b;margin:0}
+.v07-entry-notice{position:absolute;left:202px;top:178px;width:676px;height:155px;border:1px solid #f0b8c2;background:#fff3f5;border-radius:33px;text-align:center;padding-top:24px}
+.v07-entry-notice strong{color:#d10a2c;font-size:27px;line-height:33px;font-weight:800}
+.v07-entry-notice hr{width:370px;border:0;border-top:1px solid #efc4cc;margin:15px auto}
+.v07-entry-notice p{font-size:26px;line-height:36px;font-weight:800;margin:0;white-space:nowrap}
+.v07-entry-image{position:absolute;left:250px;top:375px;width:580px;height:390px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:3px dashed #d9dee5;border-radius:24px;color:#858e99;font-size:28px;line-height:34px;font-weight:800;text-align:center}
+.v07-receipt-button{position:absolute;left:190px;top:824px;width:700px;height:96px;font-size:31px}
+.v07-welcome-brand{position:absolute;left:56px;top:374px;width:968px;margin:0;font-size:36px;line-height:30px;color:#747d89;text-align:center}
+.v07-welcome h2{position:absolute;left:56px;top:435px;width:968px;text-align:center;font-size:60px;line-height:64px;font-weight:600;margin:0}
+.v07-welcome-badge{position:absolute;left:220px;top:618px;width:640px;height:68px;background:#fff3f5;border:1px solid #f0b8c2;border-radius:34px;display:flex;align-items:center;gap:22px;padding:0 21px;font-weight:800}
+.v07-welcome-badge strong{width:216px;font-size:30px;color:#d10a2c;text-align:right;border-right:1px solid #efc4cc;padding-right:16px}
+.v07-welcome-badge span{font-size:28px}
+.v07-welcome-choices{position:absolute;left:64px;top:893px;width:952px;display:grid;grid-template-columns:465px 465px;gap:22px}
+.v07-welcome-choices>button{height:272px;border:1px solid #d9dee5;border-radius:30px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;color:#15171b;font-size:28px}
+.v07-welcome-choices>button:last-child{background:#d10a2c;border-color:#d10a2c;color:#fff}
+.v07-welcome-choices .vehicle-icon{width:190px;height:96px;position:relative;transform:none}
+.v07-welcome .v07-welcome-qr{left:64px;top:1197px;width:952px}
+.v07-welcome.member .v07-welcome-brand{display:none}
+.v07-welcome.member h2{top:660px;font-size:46px;line-height:56px}
+.v07-welcome-description{position:absolute;left:64px;top:827px;width:952px;margin:0;text-align:center;font-size:25px;color:#747d89}
+.v07-welcome.member .v07-welcome-badge{top:669px}
+.v07-welcome.member h2{top:757px;font-size:48px;line-height:58px;letter-spacing:-1.92px}
+.v07-help-dim{position:absolute;inset:0;background:#505257}
+.v07-help{position:absolute;left:48px;top:27px;width:984px;height:1824px;border-radius:24px;background:#030405;border:1px solid #292e36;box-shadow:0 16px 40px #0006;overflow:hidden;color:#f7f7f9;display:flex;flex-direction:column;justify-content:center}
+.v07-help>header{height:168px;flex:0 0 168px;background:#101215;display:flex;align-items:center;gap:22px;padding:0 58px;border-bottom:1px solid #292d34;position:relative}
+.v07-info-badge{background:#ed111c;width:58px;height:58px;border-radius:16px;display:grid;place-items:center}
+.v07-info-badge img{width:29px;height:40px}
+.v07-help h2{font-size:40px;line-height:50px;margin:0;font-weight:800}
+.v07-help>header button{position:absolute;right:58px;top:56px;width:56px;height:56px;border:2px solid white;border-radius:28px;background:#101215;display:grid;place-items:center}
+.v07-help>header button img{width:24px;height:24px}
+.v07-help h3{font-size:30px;line-height:40px;margin:0;font-weight:800}
+.v07-help-steps{height:789px;flex:0 0 789px;padding:49px 58px 0;display:flex;flex-direction:column;gap:27px;overflow:hidden}
+.v07-help-steps>article{display:flex;gap:24px;align-items:center}
+.v07-help-step-icon{width:86px;height:86px;flex:0 0 86px;border:2px solid #ed111c;border-radius:50%;display:grid;place-items:center;overflow:hidden}
+.v07-help-step-icon img{width:60px;height:60px;object-fit:contain}
+.v07-help-steps>article>div{flex:1}
+.v07-help h4{display:flex;gap:14px;font-size:27px;line-height:35px;margin:0 0 5px}
+.v07-help h4 b{color:#ed111c}
+.v07-help-steps p{font-size:21px;line-height:30px;margin:0;color:#c3c8d0}
+.v07-help-steps aside{display:flex;gap:16px;align-items:center;margin-top:14px}
+.v07-help-steps aside img{width:76px;height:76px;object-fit:contain}
+.v07-help-steps aside strong{color:#ed111c;font-size:22px}
+.v07-help-notice{height:330px;flex:0 0 330px;padding:47px 58px 31px}
+.v07-help-notice h3{display:flex;align-items:center;gap:14px;margin:0 0 14px}
+.v07-help-notice h3 img{width:38px;height:38px;object-fit:contain}
+.v07-help-notice ul{margin:0;padding-left:22px;font-size:20px;line-height:30px;color:#c3c8d0}
+.v07-help-video{align-self:center;display:flex;gap:20px;align-items:center;padding:0 30px;width:855px;height:217px;flex:0 0 217px;background:#101215;border-radius:20px}
+.v07-help-video>img{width:160px;height:160px;object-fit:contain}
+.v07-help-video h3{font-size:27px}
+.v07-help-video p{font-size:22px;line-height:32px;color:#c3c8d0;margin:14px 0 0}
+.v07-help>footer{height:209px;flex:0 0 209px;display:grid;place-items:center}
+.v07-help>footer button{width:855px;height:92px;border-radius:20px;font-size:30px}
+.v07-admin{background:#090a0c;color:#f5f6f8}
+.v07-admin-head{height:92px;background:#181a1f;border-bottom:1px solid #2d3037;padding:0 54px;display:flex;align-items:center;gap:8px}
+.v07-admin-head strong{font-size:29px;font-weight:700}.v07-admin-head span{font-size:22px;color:#c2c5cb}
+.v07-admin>main{position:absolute;left:54px;top:126px;width:972px;height:1510px;padding:0}
+.v07-admin-tabs{height:82px;display:flex;border-bottom:1px solid #30343c}
+.v07-admin-tabs button{width:50%;height:82px;border:0;border-bottom:5px solid transparent;background:transparent;color:#757b86;font-size:28px;font-weight:700}
+.v07-admin-tabs button.active{color:#f5f6f8;border-bottom-color:#e3062d}
+.v07-admin .admin-row{display:grid;grid-template-columns:224px 210px;gap:18px;align-items:center;height:94px;min-height:94px;padding:16px 0 16px 18px;border-bottom:1px solid #30343c;background:transparent}
+.v07-admin .admin-label strong{font-size:22px;line-height:29px;color:#f5f6f8}
+.v07-admin .admin-label span{font-size:16px;line-height:23px;color:#757b86}
+.v07-admin .admin-input,.v07-admin .admin-value,.v07-admin .admin-toggle{width:210px;height:60px;padding:0 18px;background:#1a1d23;border:1px solid #30343c;border-radius:14px;font-size:20px;color:#f5f6f8;min-width:0}
+.v07-admin .admin-value{display:flex;align-items:center}
+.v07-admin .admin-toggle{display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.v07-admin .admin-toggle.on{background:#1a1d23;border-color:#30343c}
+.v07-admin .admin-toggle i{position:relative;display:block;width:68px;height:38px;flex:0 0 68px;border-radius:22px;background:#474c55}
+.v07-admin .admin-toggle i:before{content:'';position:absolute;width:28px;height:28px;background:#fff;border-radius:50%;top:5px;left:5px}
+.v07-admin .admin-toggle.on i{background:#e3062d}.v07-admin .admin-toggle.on i:before{left:35px}
+.v07-admin-branch>.admin-row{height:118px;grid-template-columns:217px 737px;gap:18px}
+.v07-admin-branch .admin-input{width:737px;height:64px}
+.v07-admin .admin-search-select{width:737px;position:relative}
+.v07-admin .admin-search-options{position:absolute;top:64px;left:0;width:737px;background:#1a1d23;z-index:9;border:1px solid #30343c}
+.v07-admin .admin-search-options button{width:100%;background:#1a1d23;color:white;padding:20px;font-size:22px;border:0}
+.v07-admin-columns{display:grid;grid-template-columns:470px 470px;gap:32px;margin-top:24px}
+.v07-admin-spacer{height:54px;border-bottom:1px solid #30343c}
+.v07-admin-columns>div:first-child>.v07-admin-spacer:nth-of-type(7){height:76px}
+.v07-admin-actions,.v07-system-actions{position:absolute;left:0;top:1330px;width:972px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px 18px}
+.v07-admin-actions button{height:80px;border:1px solid #30343c;border-radius:14px;background:#1a1d23;font-size:22px;color:#f5f6f8}
+.v07-admin>footer{position:absolute;left:0;top:1750px;width:1080px;height:170px;padding:24px 54px;display:flex;gap:20px;background:#0d0f12;border-top:1px solid #30343c}
+.v07-admin>footer button{width:476px;height:104px;border:1px solid #30343c;border-radius:18px;background:#262a32;color:#f5f6f8;font-size:22px}
+.v07-admin-system{background:white;color:#15171b}
+.v07-admin-system .v07-admin-head{height:88px;background:#202327}
+.v07-admin-system>main{top:113px}
+.v07-admin-system .v07-admin-tabs{border-color:#d9dee5}
+.v07-admin-system .v07-admin-tabs button.active{color:#15171b}
+.v07-plc{position:absolute;left:0;top:117px;width:471px;height:626px;overflow:hidden}
+.v07-plc img{position:absolute;height:125.2%;width:266.27%;max-width:none;left:-63.66%;top:-11.42%}
+.v07-system-log{position:absolute;top:768px;left:0;width:970px}
+.v07-admin-system .admin-row{grid-template-columns:496px 390px;gap:28px;padding:16px 28px;border-color:#d9dee5}
+.v07-admin-system .admin-label strong{color:#15171b;font-size:26px}
+.v07-admin-system .admin-toggle{width:390px;background:white;color:#15171b;border:1px solid #0945b8}
+.v07-admin-system .admin-toggle.on i{background:#0945b8}
+.v07-system-actions{top:928px;gap:14px 22px}
+.v07-system-actions button{height:80px;background:#505050;color:white;border:0;border-radius:0;font-size:22px;font-weight:700}
+.v07-admin-system>footer{top:1734px;background:white;border-color:#d9dee5;height:169px;padding-top:18px}
+.v07-admin-system>footer button:first-child{background:#2b2b31}
+.v07-save-dim{position:absolute;inset:0;background:#0006}
+.v07-save-dialog{position:absolute;left:48px;top:690px;width:984px;height:540px;background:white;border:1px solid #e9e9e9;border-radius:28px;padding:51px 55px 60px;color:#171717}
+.v07-save-dialog p{margin:0;text-align:center;font-size:48px;line-height:60px;font-weight:700}
+.v07-save-dialog>div{position:absolute;left:55px;top:359px;display:flex;gap:28px}
+.v07-save-dialog button{width:422px;height:120px;background:#f5f5f5;color:#171717;font-size:31px;border:1px solid #e9e9e9;border-radius:16px}
+.v07-no-screen{position:absolute;inset:0;display:grid;place-items:center;background:white;color:#15171b;font-size:48px;font-weight:700}
+.v07-admin-head strong{color:#f5f6f8}
+.v07-completion-screen{position:absolute;inset:0;width:1080px;height:1920px;background:white}
+.v07-completion-status{position:absolute;left:0;top:700px;width:1080px;height:80px}
+.v07-completion-status>.course-status-bar{position:absolute;top:0;left:0;width:1080px}
+.v07-completion-screen .ad-zone,.v07-course .ad-zone{position:absolute;left:0;top:0;height:700px;width:1080px;background:#eef1f4;display:grid;place-items:center}
+.v07-completion-screen .ad-placeholder,.v07-course .ad-placeholder{font-size:0;border:3px dashed #b9c0c9;border-radius:18px;padding:21px 33px;color:#858e99}
+.v07-completion-screen .ad-placeholder:after,.v07-course .ad-placeholder:after{content:'키오스크 상단 광고 영역';font-size:24px;font-weight:800;letter-spacing:1.92px}
+.v07-network{position:absolute;inset:0;background:#090909;color:white}
+.v07-network-icon{position:absolute;left:440px;top:675px;width:200px;height:180px}
+.v07-network-icon img:first-child{position:absolute;left:5px;top:5px;width:190px;height:170px}
+.v07-network-icon img:nth-child(2){position:absolute;left:95px;top:53px;width:10px;height:68px}
+.v07-network-icon img:nth-child(3){position:absolute;left:93px;top:135px;width:14px;height:14px}
+.v07-network-icon span{position:absolute;top:72px;left:0;width:200px;text-align:center;font-size:24px;line-height:35px;font-weight:800}
+.v07-network h2{position:absolute;left:80px;top:925px;width:920px;margin:0;font-size:60px;line-height:72px;text-align:center;color:#fff;font-weight:800}

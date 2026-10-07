@@ -1,0 +1,80 @@
+/* 1·2안: v0.6의 KIO-CRS-001 / KIO-PAY-001 화면을 기준으로 적용. */
+body:is([data-mode="popup"], [data-mode="steps"]) { background:#191b1f; }
+body:is([data-mode="popup"], [data-mode="steps"]) .review-nav button { color:#d6dbe2; }
+body:is([data-mode="popup"], [data-mode="steps"]) .review-nav button[aria-pressed="true"] { background:#e30622; color:#fff; }
+.existing-design { --ink:#171717; --paper:#fff; --accent:#e30622; --muted:#747d89; --line:#d8dde3; --display:"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif; --ad-height:700px; font-family:var(--display); color:var(--ink); }
+.existing-design button:focus-visible { outline-color:var(--accent); }
+.existing-design .advertising { background:#eef1f4; color:#858e99; border-bottom:1px solid var(--line); }
+.existing-design .advertising::before, .existing-design .advertising::after { display:none; }
+.existing-design .advertising span { padding:18px 24px; border:3px dashed #bcc3cc; border-radius:18px; font-size:26px; font-weight:800; letter-spacing:0; }
+.existing-design .brand-header { flex:0 0 80px; padding:0 48px; background:#353a40; color:#fff; }
+.existing-design .brand-header > strong { font-size:25px; font-weight:800; }
+.existing-design .brand-header > span { display:flex; align-items:center; gap:36px; }
+.existing-design .brand-header small { font-size:24px; color:#858e99; font-weight:800; }
+.existing-design .brand-header b { font-size:30px; }
+.existing-design .journey { padding:16px 72px; background:#f5f6f8; }
+.existing-design .journey-item { color:#858e99; }
+.existing-design .journey-item b { border-color:#c8cdd3; }
+.existing-design .journey-item.active { color:var(--ink); }
+.existing-design .journey-item.active b { background:var(--accent); border-color:var(--accent); color:#fff; }
+.existing-design .journey-line { background:#d8dde3; }
+.existing-design main { padding:32px 72px 24px; }
+.existing-design h1 { margin-bottom:32px; font-size:48px; line-height:1.2; font-weight:800; letter-spacing:-.055em; text-align:center; }
+.existing-design .courses { gap:24px; }
+.existing-design .course { padding:0; min-height:280px; overflow:hidden; border:1px solid #858e99; border-radius:24px; background:#fff; }
+.existing-design .course.featured { border-color:#858e99; background:#fff; }
+.existing-design .course:hover, .existing-design .course:focus-visible { border-color:var(--accent); background:#fff5f6; }
+.existing-design .course-number { display:none; }
+.existing-design .course-name { padding:32px; font-size:42px; line-height:1.3; font-weight:800; letter-spacing:-.055em; }
+.existing-design .course-bottom { padding:20px 32px; border:0; background:var(--accent); color:#fff; }
+.existing-design .course-bottom small { color:#fff; font-size:22px; }
+.existing-design .price { font-size:44px; font-weight:800; }
+.existing-design .methods { gap:24px; }
+.existing-design .method { align-items:center; justify-content:center; min-height:240px; padding:24px; gap:24px; border:1px solid #858e99; border-radius:20px; background:#fff; text-align:center; }
+.existing-design .method strong { font-size:30px; font-weight:800; letter-spacing:-.045em; }
+.existing-design .method-arrow { display:none; }
+.existing-design .method:hover:not(:disabled) { border-color:var(--accent); background:#fff5f6; }
+.existing-design .method:disabled { border-color:#c8cdd3; background:#f4f6f8; color:#747d89; }
+.existing-design .icon { width:72px; height:72px; color:var(--ink); }
+.existing-design .icon svg { width:64px; height:64px; stroke-width:4; }
+.existing-design .method:disabled .icon { width:64px; height:64px; background:#ffe8ed; color:var(--accent); font-size:36px; font-weight:800; }
+.existing-design .discount-page .method { min-height:200px; }
+.existing-design .wide-button { min-height:88px; margin-top:24px; border:1px solid #d8dde3; border-radius:14px; background:#f4f6f8; color:var(--ink); font-size:29px; font-weight:800; }
+.existing-design .wide-button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+.existing-design .summary-bottom { padding-top:24px; }
+.existing-design .amount { grid-template-columns:1fr 1fr; padding:20px 28px; gap:24px; border:1px solid #858e99; border-radius:20px; background:#fff; color:var(--ink); }
+.existing-design .course-process { padding:16px 18px; border-radius:12px; background:#f4f6f8; }
+.existing-design .course-process .course-title { margin-bottom:10px; color:var(--ink); font-size:30px; line-height:1.2; font-weight:800; letter-spacing:-.045em; }
+.existing-design .course-flow { gap:6px 0; }
+.existing-design .course-flow li { color:#747d89; font-size:21px; line-height:1.45; }
+.existing-design .course-flow li:not(:last-child)::after { content:">"; margin:0 10px; color:#89929d; }
+.existing-design .course-flow strong { color:var(--accent); font-weight:800; }
+.existing-design .amount-lines { padding-left:24px; border-color:#d8dde3; }
+.existing-design .amount-row { min-height:34px; color:#747d89; font-size:23px; font-weight:700; }
+.existing-design .amount-row strong { color:var(--ink); font-size:23px; font-weight:800; }
+.existing-design .amount-row.applied strong { color:var(--accent); }
+.existing-design .amount-row.total { align-items:center; min-height:72px; margin-top:12px; padding-top:12px; border-color:#858e99; color:var(--ink); font-size:27px; font-weight:800; }
+.existing-design .amount-row.total strong { color:var(--accent); font-size:44px; font-weight:800; }
+.existing-design .popup-payment .method-group { border-color:#d8dde3; }
+.existing-design .popup-payment .discount-group { background:#f4f6f8; }
+.existing-design .popup-payment .payment-group { border-color:#858e99; background:#fff; }
+.existing-design .popup-payment .group-label { color:var(--ink); font-weight:800; }
+.existing-design .popup-payment .method { min-height:140px; padding:16px; gap:12px; background:#fff; }
+.existing-design .popup-payment .method strong { font-size:26px; }
+.existing-design .popup-payment .payment-group .method { min-height:160px; border-color:#858e99; background:#fff; }
+.existing-design .popup-payment .method:hover:not(:disabled) { border-color:var(--accent); background:#fff5f6; }
+.existing-design .popup-payment .method:disabled { background:#f4f6f8; }
+.existing-design .popup-payment .icon, .existing-design .popup-payment .method:disabled .icon { width:48px; height:48px; font-size:30px; }
+.existing-design .popup-payment .icon svg { width:44px; height:44px; }
+.existing-design footer { flex-basis:120px; padding:16px 48px; background:#fff; }
+.existing-design footer button { min-height:84px; padding:16px 28px; border:1px solid #d8dde3; border-radius:14px; background:#f4f6f8; color:var(--ink); font-size:28px; font-weight:800; }
+.existing-design footer span { color:#747d89; font-size:21px; }
+.existing-design .overlay { background:#0009; backdrop-filter:none; }
+.existing-design .dialog { padding:48px; border-radius:28px; background:#fff; }
+.existing-design .dialog h2 { font-size:44px; font-weight:800; letter-spacing:-.055em; text-align:center; }
+.existing-design .dialog p { color:#747d89; font-size:27px; font-weight:700; text-align:center; }
+.existing-design .scan { border:1px solid #c8cdd3; border-radius:24px; background:#f4f6f8; color:#353a40; }
+.existing-design .dialog button { border:1px solid #d8dde3; border-radius:14px; background:#f4f6f8; color:var(--ink); font-size:29px; font-weight:800; }
+.existing-design .dialog button.primary { border-color:var(--accent); background:var(--accent); color:#fff; }
+.existing-design .complete .check { background:#fff0f2; color:var(--accent); }
+.existing-design .complete p { color:#747d89; }
