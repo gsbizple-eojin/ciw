@@ -25,7 +25,7 @@ console.assert(
 function screenUrl(id, standalone = false) {
   const params = new URLSearchParams({ screen: id, height: selectedHeight });
   if (standalone) params.set("embed", "1");
-  return `./CIW_차세대_키오스크_프로토타입_v0.7.html?${params}`;
+  return `./index.html?${params}`;
 }
 
 function updateSummary() {
