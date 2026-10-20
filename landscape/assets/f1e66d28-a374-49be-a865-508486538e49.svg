@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="conts" clip-path="url(#clip0_0_1581)">
+<path id="Vector" d="M32 6.89486V0H0V6.89486C1.72525 6.92385 3.11635 8.30193 3.11635 10.0011C3.11635 11.7003 1.72525 13.0784 0 13.1074V20.0022H32V13.1074C30.2748 13.0784 28.8836 11.7003 28.8836 10.0011C28.8836 8.30193 30.2748 6.92385 32 6.89486Z" fill="#FF4050"/>
+<g id="Group">
+<path id="Vector_2" d="M13.5269 2.82752H6.97826V5.05742H13.5269V2.82752Z" fill="#C10C23"/>
+<path id="Vector_3" d="M13.5269 6.55591H6.97826V8.78582H13.5269V6.55591Z" fill="#C10C23"/>
+<path id="Vector_4" d="M13.5269 10.3044H6.97826V13.4262H13.5269V10.3044Z" fill="#C10C23"/>
+<path id="Vector_5" d="M13.5269 14.9426H6.97826V17.1725H13.5269V14.9426Z" fill="#C10C23"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1581">
+<rect width="32" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>

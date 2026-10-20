@@ -1,4 +1,70 @@
 const CIW_ASSETS = {
+  "v03-intro-imgQrL": "assets/images/design-intro-imgQrL.png",
+  "v03-intro-imgAppBannerBg": "assets/images/v03-intro-imgAppBannerBg.png",
+  "v03-intro-imgShadow": "assets/images/v03-intro-imgShadow.svg",
+  "v03-intro-imgTypeSuvSizeLarge": "assets/images/design-intro-imgSuv.png",
+  "v03-intro-imgTypeSedanSizeLarge": "assets/images/design-intro-imgSedan.png",
+  "v03-intro-imgRectangle39592066": "assets/images/design-intro-imgRectangle39592066.png",
+  "v03-intro-imgElement": "assets/images/v03-intro-imgElement.svg",
+  "v03-intro-imgElement1": "assets/images/v03-intro-imgElement1.svg",
+  "v03-intro-imgElement2": "assets/images/v03-intro-imgElement2.svg",
+  "v03-intro-imgElement3": "assets/images/design-intro-imgElement3.svg",
+  "v03-course-imgQrS": "assets/images/design-intro-imgQrL.png",
+  "v03-course-imgAppBannerBgGray": "assets/images/design-course-imgAppBannerBgGray.png",
+  "v03-course-imgShadow": "assets/images/design-course-imgShadow.svg",
+  "v03-course-imgTrackStroke": "assets/images/v03-course-imgTrackStroke.svg",
+  "v03-course-imgProgressRing": "assets/images/v03-course-imgProgressRing.svg",
+  "v03-course-imgSample01": "assets/images/design-course-imgSample01.png",
+  "v03-course-imgLogo": "assets/images/design-course-imgLogo.svg",
+  "v03-course-imgElement": "assets/images/v03-course-imgElement.svg",
+  "v03-course-imgElement1": "assets/images/v03-course-imgElement1.svg",
+  "v03-course-imgElement2": "assets/images/v03-course-imgElement2.svg",
+  "v03-course-imgElement3": "assets/images/v03-course-imgElement3.svg",
+  "v03-course-imgIcon": "assets/images/v03-course-imgIcon.svg",
+  "v03-popup-imgGroup48096042": "assets/images/v03-popup-imgGroup48096042.svg",
+  "v03-popup-imgGroup48096043": "assets/images/v03-popup-imgGroup48096043.svg",
+  "v03-popup-imgLineIcon": "assets/images/v03-popup-imgLineIcon.svg",
+  "v03-popup-imgIcon": "assets/images/v03-course-imgIcon.svg",
+  "v03-popup-imgSample01": "assets/images/design-course-imgSample01.png",
+  "v03-popup-imgLogo": "assets/images/design-course-imgLogo.svg",
+  "v03-popup-imgTrackStroke": "assets/images/v03-popup-imgTrackStroke.svg",
+  "v03-popup-imgProgressRing": "assets/images/v03-course-imgProgressRing.svg",
+  "v03-popup-imgElement": "assets/images/v03-popup-imgElement.svg",
+  "v03-popup-imgElement1": "assets/images/v03-popup-imgElement1.svg",
+  "v03-popup-imgElement2": "assets/images/v03-popup-imgElement2.svg",
+  "v03-popup-imgElement3": "assets/images/v03-popup-imgElement3.svg",
+  "v03-popup-imgIcBack24Px": "assets/images/v03-popup-imgIcBack24Px.svg",
+  "v03-popup-imgLine4": "assets/images/v03-popup-imgLine4.svg",
+  "v03-scan-imgSample01": "assets/images/design-course-imgSample01.png",
+  "v03-scan-imgLogo": "assets/images/design-course-imgLogo.svg",
+  "v03-scan-imgTrackStroke": "assets/images/v03-scan-imgTrackStroke.svg",
+  "v03-scan-imgProgressRing": "assets/images/v03-course-imgProgressRing.svg",
+  "v03-scan-imgIPhone16Pro": "assets/images/v03-scan-imgIPhone16Pro.png",
+  "v03-scan-imgElement": "assets/images/v03-scan-imgElement.svg",
+  "v03-scan-imgElement1": "assets/images/v03-scan-imgElement1.svg",
+  "v03-scan-imgElement2": "assets/images/v03-scan-imgElement2.svg",
+  "v03-scan-imgElement3": "assets/images/v03-scan-imgElement3.svg",
+  "v03-scan-imgIcBack24Px": "assets/images/v03-popup-imgIcBack24Px.svg",
+  "v03-scan-imgRectangle1430106603": "assets/images/v03-scan-imgRectangle1430106603.svg",
+  "v03-scan-imgRectangle1430106604": "assets/images/v03-scan-imgRectangle1430106604.svg",
+  "v03-scan-imgRectangle1430106605": "assets/images/v03-scan-imgRectangle1430106605.svg",
+  "v03-scan-imgFillIcon": "assets/images/v03-scan-imgFillIcon.svg",
+  "v03-scan-imgCheckStroke": "assets/images/v03-scan-imgCheckStroke.svg",
+  "v03-scan-imgLabelBaseKiosk": "assets/images/v03-scan-imgLabelBaseKiosk.svg",
+  "v03-payment-imgGroup48096042": "assets/images/v03-popup-imgGroup48096042.svg",
+  "v03-payment-imgGroup48096043": "assets/images/v03-popup-imgGroup48096043.svg",
+  "v03-payment-imgLineIcon": "assets/images/v03-popup-imgLineIcon.svg",
+  "v03-payment-imgIcon": "assets/images/v03-course-imgIcon.svg",
+  "v03-payment-imgSample01": "assets/images/design-course-imgSample01.png",
+  "v03-payment-imgLogo": "assets/images/design-course-imgLogo.svg",
+  "v03-payment-imgTrackStroke": "assets/images/v03-payment-imgTrackStroke.svg",
+  "v03-payment-imgProgressRing": "assets/images/v03-course-imgProgressRing.svg",
+  "v03-payment-imgElement": "assets/images/v03-payment-imgElement.svg",
+  "v03-payment-imgElement1": "assets/images/v03-payment-imgElement1.svg",
+  "v03-payment-imgElement2": "assets/images/v03-payment-imgElement2.svg",
+  "v03-payment-imgElement3": "assets/images/v03-payment-imgElement3.svg",
+  "v03-payment-imgIcBack24Px": "assets/images/v03-popup-imgIcBack24Px.svg",
+  "v03-payment-imgLine4": "assets/images/v03-popup-imgLine4.svg",
   "assets/asis-card-payment-popup.png": "assets/images/asis-card-payment-popup.png",
   "assets/auto-mascot.png": "assets/images/auto-mascot.png",
   "assets/figma-intro/sedan-body-outline.svg": "assets/images/sedan-body-outline.svg",
@@ -540,14 +606,30 @@ function simulateQr() {
 function render() {
   // v0.7에서 추가한 렌더러는 변경 화면 스크립트 로딩 후 등록된다.
   if (!renderers[state.screen]) return;
+  const previousScreen = kiosk.dataset.screen;
   kiosk.className = `kiosk height-${state.height}`;
   kiosk.dataset.screen = state.screen === "discountApplied" ? "payment" : state.screen;
   kiosk.innerHTML = renderers[state.screen]();
   if (state.timeoutVisible) kiosk.insertAdjacentHTML("beforeend", timeoutPopup());
+  animateDesignEntry(previousScreen);
   updateReviewPanel();
   if (!embedMode) fitKiosk();
   startTimeoutPreview();
   startScreenTimeout();
+}
+
+function animateDesignEntry(previousScreen) {
+  const design = kiosk.querySelector('.ciw-design');
+  if (!design || embedMode) return;
+  const dialog = design.querySelector('.design-discount-dialog');
+  if (dialog) dialog.querySelector('button').focus({preventScroll:true});
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || previousScreen === kiosk.dataset.screen) return;
+  const body = design.querySelector('main');
+  if (body) body.animate([{opacity:0,translate:'0 18px'},{opacity:1,translate:'0 0'}],{duration:280,easing:'cubic-bezier(.16,1,.3,1)'});
+  if (dialog) {
+    dialog.animate([{opacity:0,translate:'0 22px',scale:.96},{opacity:1,translate:'0 0',scale:1}],{duration:320,easing:'cubic-bezier(.16,1,.3,1)'});
+    design.querySelector('.design-dialog-dim').animate([{opacity:0},{opacity:1}],{duration:180});
+  }
 }
 
 function updateReviewPanel() {
@@ -694,7 +776,7 @@ function handleAction(target) {
     clearTimers();
     if (result.valid) {
       state.discountApplied = true;
-      state.discountSuccessMessage = result.message;
+      state.discountSuccessMessage = result.message.replaceAll('{할인금액}', configuredDiscountAmount().toLocaleString('ko-KR'));
       go("discountApplied");
     } else {
       state.discountApplied = false;
@@ -708,7 +790,7 @@ function handleAction(target) {
     go("payment");
   } else if (action === "pay-method") {
     state.selectedPayment = target.dataset.method;
-    const routes = { card: "cardPay", app: "appPay", mobile: "mobileVoucher", paper: "paperCoupon", discount: "discountScan" };
+    const routes = { card: "cardPay", app: "appPay", mobile: "mobileVoucher", paper: "paperCoupon", discount: "discountUse" };
     go(routes[target.dataset.method]);
   } else if (action === "complete-payment") {
     go(completionRoute("payment"));
@@ -926,6 +1008,9 @@ function applyV07Actions() {
 const v06HandleAction = handleAction;
 handleAction = function(target) {
   const action=target.dataset.action;
+  if(action === 'back' && ['payment','discountUse','paymentMobileApplied','paymentPaperApplied','paymentDiscountMobileApplied'].includes(state.screen)) {
+    resetPaymentAdjustments(); state.history=[]; return go('course',false);
+  }
   if(action==='course-info') {go('courseInfo');if(!embedMode)state.timer=window.setTimeout(()=>{state.history.pop();go('course',false);},5000);return;}
   if(action==='course-info-close') {clearTimers();state.history.pop();return go('course',false);}
   if(action==='v07-qr') return simulateQr();

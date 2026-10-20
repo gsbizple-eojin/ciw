@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1772515498">
+<rect id="Rectangle 39592084" y="3.09091" width="34" height="10.8182" fill="#A2A9B3"/>
+<rect id="Rectangle 39592085" y="6.18182" width="34" height="2.31818" fill="#474E5A"/>
+<rect id="Rectangle 39592086" y="11.5909" width="34" height="2.31818" fill="#474E5A"/>
+<path id="Union" d="M34 0V34H30.9092V3.09082H3.09082V34H0V0H34Z" fill="#5B616C"/>
+<path id="Vector" d="M24.6483 24.4094C24.5027 24.6865 24.1876 24.859 23.8281 24.859H21.2652L22.9087 32.8122C22.9521 33.1129 22.8405 33.4152 22.603 33.6427C22.3654 33.8693 22.0224 34 21.6629 34H12.3369C11.9774 34 11.6355 33.8702 11.3969 33.6427C11.1593 33.4161 11.0477 33.1129 11.0911 32.8122L12.7346 24.859H10.1717C9.81225 24.859 9.49718 24.6865 9.35153 24.4094C9.20587 24.1314 9.26476 23.8194 9.50648 23.5937L16.3345 17.2366C16.6744 16.9211 17.3241 16.9211 17.665 17.2366L24.4931 23.5946C24.7348 23.8194 24.7947 24.1323 24.648 24.4103L24.6483 24.4094Z" fill="url(#paint0_linear_0_1590)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1590" x1="17" y1="17" x2="17" y2="34" gradientUnits="userSpaceOnUse">
+<stop offset="0.515937" stop-color="#FF4050"/>
+<stop offset="0.865385" stop-color="#FF4050" stop-opacity="0.1"/>
+<stop offset="1" stop-color="#FF4050" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

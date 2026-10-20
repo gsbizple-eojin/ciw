@@ -25,13 +25,7 @@ function courseScreen(overlay = "") {
 
 
 function discountRegistrationScreen() {
-  return courseScreen(modalPopup({
-    title: "주유 세차 할인권을 사용하시겠습니까?",
-    className: "discount-registration-modal",
-    content: `<p class="discount-registration-intro">5만원 이상 주유 시 영수증 하단에 세차 할인권이 발급됩니다.</p>`,
-    actions: [{ label: "사용 안함", action: "skip-discount", className: "light" }, { label: "사용", action: "discount-use" }],
-    secondary: null,
-  }));
+  return paymentScreen(`<div class="design-dialog-layer"><div class="design-dialog-dim"></div><section class="design-discount-dialog" role="dialog" aria-modal="true" aria-labelledby="discountDialogTitle"><div class="design-discount-copy"><h2 id="discountDialogTitle">주유 세차 할인권을 사용하시겠습니까?</h2><p>5만원 이상 주유 시 영수증 하단에<br>세차 할인권이 발급됩니다.</p></div><div class="design-discount-actions"><button data-action="skip-discount">사용 안함</button><button data-action="discount-use">사용</button></div></section></div>`);
 }
 
 
@@ -72,16 +66,16 @@ const courseProcesses = [
 
 // 최신 UI 등록. init.js에서 기존 초기화 이후 한 번 호출한다.
 function applyCourseScreens() {
-// Figma Design/screen/KIO-CRS-001 · 674:4771
+// Figma screen/KIO-CRS-001 · 837:9803
 courseScreen = function(overlay = '') {
   if (state.screen !== 'course' && state.screen !== 'courseInfo') return v06Course(overlay);
   const descriptions = {ultimate:'최고급 풀코스 세차 코스', premium:'베이직 + 하부 + 중성 + 왁스 코팅', deluxe:'베이직 + 하부 세차 추가', basic:'컴인워시 기본 세차코스'};
   const cards = ['ultimate','premium','deluxe','basic'].map(id => {
     const index = courses.findIndex(course => course.id === id);
     const course = courses[index];
-    return `<button class="design-course-card ${id}" data-action="select-course" data-course="${id}"><span class="design-course-card-top"><span class="design-course-name"><strong>${course.name}</strong><small>${courseEnglish[index]}</small></span><span class="design-course-price"><b>${course.price.toLocaleString('ko-KR')}</b>원</span></span><span class="design-course-description">${descriptions[id]}</span></button>`;
+    return `<button class="design-course-card ${id}" data-action="select-course" data-course="${id}"><span class="design-course-card-top"><span class="design-course-name"><strong>${course.name}</strong><small>${courseEnglish[index]}</small></span><span class="design-course-price"><b>${course.price.toLocaleString('ko-KR')}</b>원</span></span><span class="design-course-card-bottom"><span class="design-course-description">${descriptions[id]}</span>${id === 'ultimate' ? '<span class="design-recent-tag">최근이용</span>' : ''}</span></button>`;
   }).join('');
-  return `<div class="ciw-design design-course" data-design-node="674:4771">${designBackground('course')}<section class="design-display" aria-label="컴인워시 광고"><img class="design-display-image" src="${designAsset('design-course-imgSample01')}" alt="" /><span></span><img class="design-display-logo" src="${designAsset('design-course-imgLogo')}" alt="COME IN WASH" /></section>${designHeader(true)}<main class="design-course-body"><header><h2>세차 코스를 선택해 주세요</h2><button class="design-course-info" data-action="course-info"><img src="${designAsset('design-course-imgIcon')}" alt="" />세차 코스 안내</button></header><div class="design-course-cards">${cards}</div>${designAppBanner('course')}</main><footer class="design-course-footer"><button data-action="height-select"><img src="${designAsset('design-course-imgIcLowScreen')}" alt="" />화면 높이</button><button data-action="help"><img src="${designAsset('design-course-imgIcFilledInfo24Px')}" alt="" />이용 안내</button></footer>${adminEntryHotspot()}${overlay}</div>`;
+  return `<div class="ciw-design design-course" data-design-node="837:9803">${designBackground('course')}${designDisplay()}${designHeader(true)}<main class="design-course-body"><header><h2>세차 코스를 선택해 주세요</h2><button class="design-course-info" data-action="course-info"><img src="${designAsset('v03-course-imgIcon')}" alt="" />세차 코스 안내</button></header><div class="design-course-cards">${cards}</div>${designAppBanner('course')}</main>${adminEntryHotspot()}${overlay}</div>`;
 };
 function courseInfoScreen() {
   return courseScreen(`<div class="v07-course-info-dim"></div><section class="v07-course-info" role="dialog" aria-modal="true" aria-labelledby="courseInfoTitle"><header><h2 id="courseInfoTitle">세차 코스 정보</h2><button data-action="course-info-close" aria-label="닫기">×</button></header>${courses.map((c,i)=>`<article><h3>${c.name} <small>${courseEnglish[i]}</small><b>${formatPrice(c.price)}</b></h3><p>${courseProcesses[i]}</p></article>`).join('')}<button class="v07-red" data-action="course-info-close">닫기</button></section>`);

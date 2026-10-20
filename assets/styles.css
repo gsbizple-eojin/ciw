@@ -7704,106 +7704,184 @@ body.embed .stage,
 
       .validation-review select { width:100%; margin:6px 0 10px; padding:10px; border:1px solid #3d4653; border-radius:8px; background:#151a21; color:#fff; }
 
-/* 완성 디자인 · Design/screen/KIO-INT-001, KIO-CRS-001 (674:4749, 674:4771) */
-/* 글꼴 이름을 분리해 기존 와이어프레임 화면의 표시에는 영향을 주지 않는다. */
+/* 화면설계서 (KIOSK)_v0.3_Design · 지정된 다섯 화면 */
 @font-face{font-family:'CIW Design';src:url('./fonts/PretendardVariable.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
 @font-face{font-family:'CIW Design English';src:url('./fonts/MontserratVariable.ttf') format('truetype');font-style:normal;font-weight:100 900;font-display:swap}
-.ciw-design{position:absolute;inset:0;width:1080px;height:1920px;overflow:hidden;isolation:isolate;background:#000;color:#fff;font-family:'CIW Design',sans-serif}
-.ciw-design button{color:inherit;background:transparent;padding:0;position:relative}
-.ciw-design h2,.ciw-design p{margin:0}
+.ciw-design{--glass-shadow:0 0 4px #0000001a,0 2px 16px #0000001f,inset 0 0 2px 1px #ffffff26;--glass-reflection:inset 6px 6px 1px -7px #ffffff66,inset -5px -5px 1px -6px #ffffff66,inset 2px 2px 2px -1px #ffffff80,inset -2px -2px 2px -1px #ffffff99,inset 0 0 2px 2px #999,inset 0 0 20px #f2f2f2;position:absolute;inset:0;width:1080px;height:1920px;overflow:hidden;isolation:isolate;background:#000;color:#fff;font-family:'CIW Design',sans-serif}
+.ciw-design button{color:inherit;background:transparent;padding:0;position:relative;touch-action:manipulation;transition:transform 150ms cubic-bezier(.2,.8,.2,1),filter 150ms,opacity 150ms}
+.ciw-design button:not(:disabled):active{transform:scale(.975);filter:brightness(1.13)}
+.ciw-design button:focus-visible{outline:3px solid #fff;outline-offset:6px}
+.ciw-design button:disabled{opacity:.35;cursor:not-allowed;filter:grayscale(.6)}
+.ciw-design h2,.ciw-design h3,.ciw-design p{margin:0}
 .ciw-design img{display:block;max-width:none;pointer-events:none}
 .ciw-design .design-background{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1;background:#000}
-.ciw-design .design-glow{position:absolute;opacity:.47}
+.ciw-design .design-glow{position:absolute;opacity:.36}
 .ciw-design .design-glow.light{mix-blend-mode:plus-lighter}
-.ciw-design .design-glow.upper{left:-70.27px;top:-62px;width:1313.37px;height:1029.793px;transform:scaleX(-1)}
+.ciw-design .design-glow.upper{left:-70.27px;top:246px;width:1313.37px;height:1029.793px;transform:scaleX(-1)}
 .ciw-design .design-glow.upper.light{left:-31px}
 .ciw-design .design-glow.upper img{position:absolute;left:-160px;top:-160px;width:1633.37px;height:1349.79px}
-.ciw-design .design-glow.lower{left:0;top:830px;width:1086.88px;height:852.206px;transform:scaleY(-1)}
+.ciw-design .design-glow.lower{left:0;top:1138px;width:1086.88px;height:852.206px;transform:scaleY(-1)}
 .ciw-design .design-glow.lower img{position:absolute;left:-160px;top:-160px;width:1406.88px;height:1172.21px}
+.design-intro .design-glow{opacity:.47}
+.design-intro .design-glow.upper{top:-62px}
+.design-intro .design-glow.lower{top:830px}
 .ciw-design .design-texture{position:absolute;left:0;top:0;width:3185px;height:1920px;transform:rotate(180deg);opacity:.4;mix-blend-mode:soft-light}
-.design-course .design-glow{opacity:.45}
-.design-course .design-glow.upper{top:246px}
-.design-course .design-glow.lower{top:1138px}
-.ciw-design .design-header{position:absolute;left:0;top:0;width:1080px;height:100px;padding:0 56px;display:flex;align-items:center;background:#191919;gap:24px}
-.ciw-design .design-identity{display:flex;align-items:center;gap:20px;font-size:32px;line-height:44px;white-space:nowrap}
+.ciw-design .design-header{position:absolute;left:0;top:640px;width:1080px;height:72px;padding:8px 48px;display:flex;align-items:center;background:#191919;gap:16px}
+.ciw-design .design-identity{display:flex;align-items:center;gap:20px;font-size:24px;line-height:32px;white-space:nowrap}
 .ciw-design .design-identity strong{font-weight:600}
-.ciw-design .design-identity i{display:block;width:2px;height:32px;border-radius:100px;background:rgba(255,255,255,.4)}
-.ciw-design .design-status{height:56px;display:flex;align-items:center;padding:12px 20px;border-radius:120px;background:rgba(255,255,255,.2);font-size:28px;line-height:36px;font-weight:600;white-space:nowrap}
+.ciw-design .design-identity i{display:block;width:2px;height:24px;border-radius:100px;background:#ffffff66}
+.ciw-design .design-status{display:flex;align-items:center;padding:6px 16px;border-radius:120px;background:#ffffff33;font-size:24px;line-height:32px;font-weight:600;white-space:nowrap}
+.design-intro .design-header{top:0}
+.design-intro .design-identity{font-size:28px;line-height:36px}
 .design-intro .design-status{margin-left:auto}
-.design-course .design-header{top:540px;padding:0 64px}
-.ciw-design .design-timer{position:relative;display:block;flex:none;width:72px;height:72px;margin:0 0 0 auto;padding:0;border:0;background:transparent;border-radius:0}
-.ciw-design .design-timer-track,.ciw-design .design-timer-ring{position:absolute;left:5.14px;top:5.14px;width:61.7143px;height:61.7143px}
-.ciw-design .design-timer b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'CIW Design English',sans-serif;font-size:23.04px;font-weight:600;line-height:31.68px;letter-spacing:-.144px}
-.ciw-design .design-timer-ring path{stroke-dashoffset:0;animation:kf_0_118_path-trim_0 30s linear infinite;animation-delay:var(--timer-elapsed,0s)}
-@keyframes kf_0_118_path-trim_0{0%{animation-timing-function:linear;stroke-dasharray:.85 1;visibility:visible}100%{stroke-dasharray:0 1;visibility:hidden}}
+.design-course .design-header{top:600px}
+.ciw-design .design-timer{position:relative;display:block;flex:none;width:56px;height:56px;margin:0 0 0 auto;padding:0;border:0;background:transparent;border-radius:0}
+.ciw-design .design-timer-track,.ciw-design .design-timer-ring{position:absolute;left:4px;top:4px;width:48px;height:48px}
+.ciw-design .design-timer b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'CIW Design English',sans-serif;font-size:17.92px;font-weight:600;line-height:24.64px;letter-spacing:-.112px}
+.ciw-design .design-timer-ring path{stroke-dashoffset:0;animation:design-timer-trim 30s linear infinite;animation-delay:var(--timer-elapsed,0s)}
+@keyframes design-timer-trim{0%{animation-timing-function:linear;stroke-dasharray:.85 1;visibility:visible}100%{stroke-dasharray:0 1;visibility:hidden}}
 .embed .ciw-design .design-timer-ring path{animation-play-state:paused}
-@media(prefers-reduced-motion:reduce){.ciw-design .design-timer-ring path{animation:none}}
-.ciw-design .design-intro-body{position:absolute;left:0;top:100px;width:1080px;height:1820px;display:flex;flex-direction:column;align-items:center;gap:80px;padding:160px 56px 80px}
+.ciw-design .design-intro-body{position:absolute;left:0;top:72px;width:1080px;height:1848px;display:flex;flex-direction:column;align-items:center;gap:80px;padding:180px 56px 80px}
 .ciw-design .design-intro-body>header{width:100%;display:flex;flex-direction:column;gap:40px;text-align:center}
-.ciw-design .design-intro-body h2{color:#fff;font-size:64px;font-weight:700;line-height:72px}
-.ciw-design .design-intro-body>header p{font-size:28px;line-height:36px;font-weight:500;color:rgba(255,255,255,.8)}
+.ciw-design .design-intro-body h2{color:#fff;font-size:56px;font-weight:600;line-height:64px}
+.ciw-design .design-intro-body>header p{font-size:28px;line-height:36px;font-weight:400;color:#ffffffcc}
 .ciw-design .design-intro-content{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;gap:80px;width:100%}
 .ciw-design .design-vehicles{display:flex;flex-direction:column;gap:20px}
-.ciw-design .design-vehicle{width:760px;height:369px;flex:none;isolation:isolate}
-.ciw-design .design-vehicle-glass{position:absolute;left:0;top:41px;width:760px;height:328px;border:1.5px solid rgba(156,156,156,.5);border-radius:60px;overflow:hidden;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;padding:200px 0 40px;background:linear-gradient(90deg,rgba(97,97,97,.1),rgba(97,97,97,.1)),linear-gradient(90deg,rgba(193,12,35,.1),rgba(193,12,35,.1));backdrop-filter:blur(8px)}
-.ciw-design .design-vehicle-glass:before{content:'';position:absolute;left:-72px;top:-85px;width:903px;height:481px;background:rgba(193,12,35,.16);opacity:.5;z-index:-1}
+.ciw-design .design-vehicle{width:760px;height:360px;flex:none;isolation:isolate}
+.ciw-design .design-vehicle-glass{position:absolute;left:0;top:32px;width:760px;height:328px;border:1.5px solid #9c9c9c80;border-radius:60px;overflow:hidden;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;padding:200px 0 48px;background:linear-gradient(90deg,#6161611a,#6161611a),linear-gradient(90deg,#c10c231a,#c10c231a);backdrop-filter:blur(8px);box-shadow:var(--glass-shadow)}
+.ciw-design .design-vehicle-glass:before{content:'';position:absolute;left:-72px;top:-85px;width:903px;height:481px;background:#c10c2329;opacity:.5;z-index:-1}
 .ciw-design .design-vehicle-glass strong{font-size:36px;line-height:48px;font-weight:600}
-.ciw-design .design-vehicle-glass small{font-size:24px;line-height:32px;font-weight:400;color:rgba(255,255,255,.8)}
-.ciw-design .design-vehicle>img{position:absolute;left:129px;top:0;width:502px;height:240px;object-fit:contain}
-.ciw-design .design-vehicle-glass,.ciw-design .design-course-card{box-shadow:0 0 4.316px rgba(0,0,0,.1),0 2.158px 17.265px rgba(0,0,0,.12),inset 6.474px 6.474px 1.079px -7.554px rgba(255,255,255,.75),inset 0 0 2.158px 2.158px rgba(153,153,153,.15)}
-.ciw-design .design-vehicle-glass:after,.ciw-design .design-course-card:after{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;mix-blend-mode:overlay;opacity:.25;box-shadow:inset -6.474px -6.474px 1.079px -7.554px rgba(255,255,255,.8),inset 2.158px 2.158px 2.158px -1.079px rgba(255,255,255,.75),inset -2.158px -2.158px 2.158px -1.079px rgba(255,255,255,.75),inset 0 0 2.158px 2.158px #999,inset 0 0 34.53px #f2f2f2}
+.ciw-design .design-vehicle-glass small{font-size:24px;line-height:32px;font-weight:400;color:#ffffffcc}
+.ciw-design .design-vehicle>img{position:absolute;left:129px;top:0;width:480px;height:224px;object-fit:contain}
 .ciw-design .design-app-banner{flex:none;position:relative;overflow:hidden;text-align:left;isolation:isolate}
-.ciw-design .design-app-banner.main{width:760px;height:216px;border-radius:32px}
+.ciw-design .design-app-banner.main{width:760px;height:200px;border-radius:30px}
 .ciw-design .design-app-banner.sub{width:840px;height:168px;border-radius:24px;border:1px solid #000}
 .ciw-design .design-banner-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
 .ciw-design .design-phone-art{position:absolute;left:16px;top:0;overflow:hidden}
-.ciw-design .design-banner-copy{position:absolute;left:212px;right:40px;top:48px;display:flex;flex-direction:column;gap:12px;font-size:24px;line-height:32px;color:#fff}
-.ciw-design .design-banner-copy>strong{font-size:32px;line-height:44px;font-weight:700}
+.ciw-design .design-banner-copy{position:absolute;left:218px;right:34px;top:43px;display:flex;flex-direction:column;gap:12px;font-size:20px;line-height:26px;color:#fff}
+.ciw-design .design-banner-copy>strong{font-size:28px;line-height:36px;font-weight:700;white-space:nowrap}
 .ciw-design .design-banner-copy>span{font-weight:400;white-space:nowrap}
 .ciw-design .sub .design-phone-art{left:24px}
-.ciw-design .sub .design-banner-copy{left:204px;top:32px}
-.ciw-design .sub .design-banner-copy>strong{font-size:28px;line-height:32px}
-.ciw-design .design-welcome-brand{color:rgba(255,255,255,.6);font-family:'CIW Design English',sans-serif;font-size:36px;font-weight:400;line-height:40px;text-align:center}
+.ciw-design .sub .design-banner-copy{left:172px;right:20px;top:36px}
+.ciw-design .sub .design-banner-copy>strong{font-size:24px;line-height:32px;font-weight:600}
+.ciw-design .design-welcome-brand{color:#fff9;font-family:'CIW Design English',sans-serif;font-size:32px;font-weight:400;line-height:40px;text-align:center}
 .ciw-design .design-welcome-brand b{font-weight:700}
-.ciw-design .design-display{position:absolute;left:0;top:0;width:1080px;height:540px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center}
-.ciw-design .design-display-image{position:absolute;left:-332.208px;top:0;width:1685.016px;height:540px;opacity:.8}
-.ciw-design .design-display>span{position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.ciw-design .design-display{position:absolute;left:0;top:0;width:1080px;height:640px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center}
+.ciw-design .design-display-image{position:absolute;left:-332.208px;top:0;width:1685.016px;height:100%;opacity:.8}
+.ciw-design .design-display>span{position:absolute;inset:0;background:#0006}
 .ciw-design .design-display-logo{position:relative;width:520px;height:48px}
-.ciw-design .design-course-body{position:absolute;left:0;top:640px;width:1080px;height:1280px;display:flex;flex-direction:column;align-items:center;gap:48px;padding:56px 120px}
-.ciw-design .design-course-body>header{width:840px;display:flex;align-items:center;justify-content:space-between}
+.design-course .design-display{height:600px}
+.ciw-design .design-course-body{position:absolute;left:0;top:672px;width:1080px;height:1240px;display:flex;flex-direction:column;align-items:center;gap:48px;padding:56px 120px}
+.ciw-design .design-course-body>header{width:840px;height:64px;flex:none;display:flex;align-items:center;justify-content:space-between}
 .ciw-design .design-course-body h2{color:#fff;font-size:44px;line-height:52px;font-weight:600;white-space:nowrap}
-.ciw-design .design-course-info{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 20px;border-radius:120px;font-size:28px;line-height:36px;font-weight:600;white-space:nowrap;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);box-shadow:0 0 4px rgba(0,0,0,.1),0 2px 16px rgba(0,0,0,.12),inset 0 0 2px 2px rgba(153,153,153,.15)}
-.ciw-design .design-course-info:after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;mix-blend-mode:overlay;opacity:.25;box-shadow:inset 6px 6px 1px -7px rgba(255,255,255,.4),inset -5px -5px 1px -6px rgba(255,255,255,.4),inset 2px 2px 2px -1px rgba(255,255,255,.5),inset -2px -2px 2px -1px rgba(255,255,255,.6),inset 0 0 2px 2px #999,inset 0 0 20px #f2f2f2}
-.ciw-design .design-course-info img{width:21.801px;height:21.801px;margin:5.1px}
-.ciw-design .design-course-cards{width:840px;height:644px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:22px 24px;flex:none}
-.ciw-design .design-course-card{min-width:0;display:flex;flex-direction:column;gap:20px;padding:32px 40px;border-radius:32px;text-align:left;overflow:hidden;backdrop-filter:blur(8px);background:rgba(255,255,255,.16)}
-.ciw-design .design-course-card.ultimate{grid-column:1 / span 2;background:linear-gradient(89.855deg,rgba(205,55,75,.8) 1.1959%,rgba(115,18,30,.8) 97.963%)}
-.ciw-design .design-course-card.premium{grid-column:1 / span 2;background:linear-gradient(89.855deg,rgba(205,55,75,.32) 1.1959%,rgba(115,18,30,.32) 97.963%)}
+.ciw-design .design-course-info{display:flex;align-items:center;justify-content:center;gap:8px;height:64px;padding:12px 20px;border-radius:120px;font-size:26px;line-height:32px;font-weight:600;white-space:nowrap;background:#ffffff29;backdrop-filter:blur(8px);box-shadow:var(--glass-shadow)}
+.ciw-design .design-course-info img{width:21.801px;height:21.801px;margin:4.1px}
+.ciw-design .design-course-cards{width:840px;height:672px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:204px 212px 212px;gap:22px 24px;flex:none}
+.ciw-design .design-course-card{min-width:0;display:flex;flex-direction:column;gap:16px;padding:32px;border-radius:30px;text-align:left;overflow:hidden;backdrop-filter:blur(8px);background:#ffffff29;box-shadow:var(--glass-shadow)}
+.ciw-design .design-course-card.ultimate{grid-column:1 / span 2;gap:12px;background:linear-gradient(89.858deg,#cd374bcc 1.1959%,#73121ecc 97.963%)}
+.ciw-design .design-course-card.premium{grid-column:1 / span 2;background:linear-gradient(89.863deg,#cd374b52 1.1959%,#73121e52 97.963%)}
 .ciw-design .design-course-card-top{display:flex;align-items:flex-start;justify-content:space-between;width:100%;white-space:nowrap}
 .ciw-design .design-course-name{display:flex;flex-direction:column;font-size:32px;line-height:44px}
-.ciw-design .design-course-name strong{font-weight:700}
-.ciw-design .design-course-name small{font-family:'CIW Design English',sans-serif;font-size:24px;line-height:44px;font-weight:600;color:rgba(255,255,255,.6)}
-.ciw-design .design-course-price{display:flex;align-items:center;gap:2px;font-size:36px;line-height:48px;font-weight:700}
+.ciw-design .design-course-name strong{font-weight:600}
+.ciw-design .ultimate .design-course-name strong{margin-bottom:-4px}
+.ciw-design .design-course-name small{font-family:'CIW Design English',sans-serif;font-size:26px;line-height:44px;font-weight:600;color:#fff9}
+.ciw-design .design-course-price{display:flex;align-items:center;gap:2px;font-size:36px;line-height:48px;font-weight:600}
 .ciw-design .design-course-price b{font-family:'CIW Design English',sans-serif;font-weight:600}
-.ciw-design .design-course-description{font-size:20px;line-height:28px;font-weight:600;color:rgba(255,255,255,.8);opacity:.7;white-space:nowrap}
-.ciw-design .design-course-footer{position:absolute;left:0;bottom:0;width:1080px;height:120px;border-top:1px solid #444;padding:20px 64px 32px;display:flex;align-items:center;justify-content:space-between}
-.ciw-design .design-course-footer button{display:flex;align-items:center;gap:8px;padding:16px 20px;border-radius:16px;background:rgba(255,255,255,.2);font-size:28px;line-height:36px;font-weight:600}
-.ciw-design .design-course-footer img{width:36px;height:36px}
-
-/* 인트로·코스선택: 짧은 진입 효과와 터치 피드백 */
-#kiosk[data-screen="intro"] .design-intro-body,
-#kiosk[data-screen="course"] .design-course-body{animation:design-enter 240ms ease-out}
-@keyframes design-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.ciw-design .design-vehicle,
-.ciw-design .design-course-card{transition:transform 100ms ease-out,filter 100ms ease-out;touch-action:manipulation}
-.ciw-design .design-vehicle:active,
-.ciw-design .design-course-card:active{transform:scale(.985);filter:brightness(1.12)}
-.ciw-design .design-vehicle-glass{transition:border-color 100ms ease-out}
-.ciw-design .design-vehicle:active .design-vehicle-glass{border-color:rgba(255,255,255,.8)}
-.embed #kiosk .design-intro-body,
-.embed #kiosk .design-course-body{animation:none}
+.ciw-design .design-course-card-bottom{height:44px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px;width:100%}
+.ciw-design .design-course-description{font-size:22px;line-height:28px;font-weight:500;color:#ffffffcc;opacity:.7;white-space:nowrap;padding-bottom:4px}
+.ciw-design .design-recent-tag{padding:6px 16px;border-radius:60px;line-height:32px;font-size:24px;font-weight:600;background:#ffffff29;box-shadow:var(--glass-shadow);white-space:nowrap}
+.ciw-design .design-payment-footer{position:absolute;left:0;bottom:0;width:1080px;height:93px;border-top:1px solid #444;padding:12px 48px 24px;display:flex;align-items:center;justify-content:space-between}
+.ciw-design .design-payment-footer button{display:flex;align-items:center;gap:8px;height:56px;padding:12px 20px;border-radius:12px;background:#ffffff33;font-size:24px;line-height:32px;font-weight:600}
+.ciw-design .design-payment-footer img{width:30px;height:30px}
+.ciw-design .design-payment-body,.ciw-design .design-scan-body{position:absolute;left:0;top:720px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:48px;padding:56px 120px}
+.ciw-design .design-payment-body>h2{font-size:44px;line-height:52px;font-weight:600;height:64px;width:100%}
+.ciw-design .design-payment-columns{display:flex;align-items:stretch;gap:24px;width:840px}
+.ciw-design .design-payment-summary{width:392px;flex:none;display:flex;flex-direction:column;justify-content:space-between;padding:32px;gap:32px;border-radius:30px;background:#ffffff0a;backdrop-filter:blur(8px);box-shadow:var(--glass-shadow)}
+.ciw-design .design-payment-summary h3{font-size:32px;line-height:44px;font-weight:600;margin-bottom:16px}
+.ciw-design .design-payment-summary>div>p{font-size:22px;line-height:28px;font-weight:400;color:#ffffffcc;word-break:keep-all}
+.ciw-design .design-amounts{display:flex;flex-direction:column}
+.ciw-design .design-amounts p{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;font-size:22px!important;line-height:32px!important;font-weight:600!important;color:#fff!important}
+.ciw-design .design-amounts b{font-family:'CIW Design English',sans-serif;font-size:24px;font-weight:600}
+.ciw-design .design-amount-divider{width:328px;height:2px;position:relative;top:-2px}
+.ciw-design .design-amounts p.total{padding-top:18px;padding-bottom:0;color:#ff4050!important}
+.ciw-design .design-amounts strong{font-family:'CIW Design English',sans-serif;font-size:32px;line-height:36px;font-weight:600}
+.ciw-design .design-amounts strong span{font-family:'CIW Design',sans-serif}
+.ciw-design .design-payment-methods{width:424px;display:flex;flex-direction:column;gap:32px}
+.ciw-design .design-payment-methods h3{font-size:26px;line-height:32px;font-weight:600;margin-bottom:16px}
+.ciw-design .design-payment-methods>section:first-child h3{height:36px}
+.ciw-design .design-discount-methods{display:flex;gap:16px}
+.ciw-design .design-pay-method{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;flex:1;min-width:0;height:120px;padding:24px 16px;border-radius:24px;overflow:hidden;backdrop-filter:blur(8px);box-shadow:var(--glass-shadow);background:linear-gradient(89.923deg,#cd374b66 1.1959%,#73121e66 97.963%)}
+.ciw-design .design-pay-method strong{font-size:26px;line-height:32px;font-weight:600}
+.ciw-design .design-primary-methods{display:flex;flex-direction:column;gap:16px}
+.ciw-design .design-primary-methods .design-pay-method{height:160px;flex:none;padding:24px;background:linear-gradient(89.812deg,#cd374bcc 1.1959%,#73121ecc 97.963%)}
+.ciw-design .design-pay-icon{width:64px;height:64px;display:flex;align-items:center;justify-content:center;flex:none}
+.ciw-design .design-pay-icon.card img{width:48px;height:48px}
+.ciw-design .design-dialog-layer{position:absolute;inset:0;z-index:30;display:grid;place-items:center}
+.ciw-design .design-dialog-dim{position:absolute;inset:0;background:#0008}
+.ciw-design .design-discount-dialog{position:relative;width:720px;border-radius:32px;overflow:hidden;background:#333;color:#fff}
+.ciw-design .design-discount-copy{padding:56px 48px 48px;text-align:center}
+.ciw-design .design-discount-copy h2{font-size:36px;line-height:48px;font-weight:600;color:#fff}
+.ciw-design .design-discount-copy p{padding-top:16px;font-size:28px;line-height:36px;font-weight:400;color:#ffffffcc}
+.ciw-design .design-discount-actions{display:flex;gap:24px;padding:0 48px 40px}
+.ciw-design .design-discount-actions button{flex:1;padding:30px 40px;border-radius:16px;background:#666;font-size:32px;line-height:44px;font-weight:600}
+.ciw-design .design-discount-actions button:last-child{background:#d10a2c}
+.ciw-design .toast-dim{background:#0004}
+.ciw-design .toast-message{background:#333;color:#fff;border-radius:24px;font-family:'CIW Design',sans-serif;font-size:32px;animation:design-feedback-in 260ms cubic-bezier(.16,1,.3,1)}
+@keyframes design-feedback-in{from{opacity:0;translate:0 16px;scale:.97}to{opacity:1;translate:0 0;scale:1}}
+.ciw-design .design-scan-body{gap:40px}
+.ciw-design .design-scan-body>header{width:840px;display:flex;flex-direction:column;gap:16px;font-weight:600}
+.ciw-design .design-scan-body>header p{font-size:26px;line-height:32px;height:36px}
+.ciw-design .design-scan-body h2{font-size:44px;line-height:52px;font-weight:600;color:#fff}
+.ciw-design button.design-scan-illustration{width:840px;height:502px;flex:none;display:flex;align-items:center;justify-content:center;padding:24px 0;border:2px solid #ffffff33;border-radius:32px;background:#000;backdrop-filter:blur(20px)}
+.ciw-design .design-qr-art{width:480px;height:450px;position:relative;display:block}
+.ciw-design .design-reader{position:absolute;left:0;top:139px;width:200px;height:160px;border-radius:16px;background:linear-gradient(#3c3c3c 43.865%,#232323 101.11%);box-shadow:0 12px 24px #0003,inset 0 0 8px #0000001a}
+.ciw-design .design-reader-face{position:absolute;inset:10px;border-radius:12px;background:linear-gradient(96.018deg,#7a7a7a .909%,#595959 50.058%,#444 101.02%);box-shadow:0 0 8px #0008}
+.ciw-design .design-reader-lens{position:absolute;left:78px;top:58px;width:44px;height:44px;border-radius:3px;background:#323232;box-shadow:inset 0 0 4px 4px #0000001f,0 0 12px 4px #0000001f}
+.ciw-design .design-reader-lens:before,.ciw-design .design-reader-lens:after,.ciw-design .design-reader-lens i{content:'';position:absolute;border-radius:100%;box-shadow:2px 4px 12px #0008}
+.ciw-design .design-reader-lens:before{inset:6px;background:#494949}
+.ciw-design .design-reader-lens:after{inset:13px;background:#252525}
+.ciw-design .design-reader-lens i{inset:18px;background:#000;z-index:1;box-shadow:inset 0 0 1px 1px #0000001f}
+.ciw-design .design-reader-highlight{position:absolute;left:14px;width:172px;height:64px}
+.ciw-design .design-reader-highlight.top{top:2px}
+.ciw-design .design-reader-highlight.bottom{top:94px;transform:rotate(180deg)}
+.ciw-design .design-scan-phone{position:absolute;left:293px;top:61.5px;width:160px;height:327px;overflow:hidden;filter:drop-shadow(8px 8px 24px #00000014)}
+.ciw-design .design-scan-phone img{position:absolute;width:354.3%;height:129.98%;left:-78.65%;top:-4.12%}
+.ciw-design .design-scan-beam{position:absolute;left:78px;top:109px;width:235px;height:229px}
+.ciw-design .design-scan-beam img{position:absolute;left:-4px;top:-4px;width:243px;height:237px}
+.ciw-design .design-scan-success{position:absolute;left:400px;top:145.5px;width:80px;height:80px}
+.ciw-design .design-scan-success>img:first-child{width:80px;height:80px}
+.ciw-design .design-scan-check{position:absolute;left:23.34px;top:26.67px;width:33.333px;height:26.667px}
+.ciw-design .design-scan-warnings{width:840px;padding:24px;display:flex;flex-direction:column;gap:12px;background:#ffffff1f;border:1px solid #ffffff33;border-radius:24px}
+.ciw-design .design-scan-warnings p{display:flex;align-items:center;gap:8px;font-size:26px;line-height:32px;font-weight:500}
+.ciw-design .design-scan-warnings img{width:24px;height:24px;flex:none}
+/* 높은 화면은 v0.6과 같이 조작부를 올리고 광고를 하단에 배치한다. */
+.kiosk.height-high .ciw-design:not(.design-intro) .design-display{top:auto;bottom:0}
+.kiosk.height-high .design-course .design-header{top:1248px}
+.kiosk.height-high .design-course .design-course-body{top:0}
+.kiosk.height-high .design-payment .design-header,.kiosk.height-high .design-discount-scan .design-header{top:1208px}
+.kiosk.height-high .design-payment-body,.kiosk.height-high .design-scan-body{top:93px}
+.kiosk.height-high .design-payment-footer{top:0;bottom:auto}
+.embed .ciw-design .toast-message{animation:none}
 @media(prefers-reduced-motion:reduce){
-  #kiosk .design-intro-body,#kiosk .design-course-body{animation:none}
-  .ciw-design .design-vehicle,.ciw-design .design-course-card,.ciw-design .design-vehicle-glass{transition:none}
-  .ciw-design .design-vehicle:active,.ciw-design .design-course-card:active{transform:none}
+  .ciw-design button{transition:none}
+  .ciw-design button:not(:disabled):active{transform:none}
+  .ciw-design .design-timer-ring path,.ciw-design .toast-message{animation:none}
 }
+
+/* Figma 스캔 안내의 30초 타임라인: 휴대폰 → 인식 광선 → 성공 표시. */
+.ciw-design .design-scan-phone{animation: kf_817_9527_opacity_0 30s linear, kf_817_9527_translate_0 30s linear; animation-iteration-count: infinite; }
+@keyframes kf_817_9527_opacity_0 { 0% { animation-timing-function: ease-out; opacity: 0; } 1.167% { opacity: 1; } 100% { opacity: 1; } } @keyframes kf_817_9527_translate_0 { 0% { animation-timing-function: cubic-bezier(0.22, 0.1, 0.25, 1); translate: 0px 120px; } 1.667% { translate: 0px 0px; } 100% { translate: 0px 0px; } }
+.ciw-design .design-scan-beam{animation: kf_817_9528_opacity_0 30s linear, kf_817_9528_scale_0 30s linear; animation-iteration-count: infinite; }
+@keyframes kf_817_9528_opacity_0 { 0% { animation-timing-function: ease-out; opacity: 0; } 1% { animation-timing-function: ease-in-out; opacity: 1; } 2% { animation-timing-function: ease-in-out; opacity: 0.4; } 3% { animation-timing-function: ease-in-out; opacity: 1; } 4% { animation-timing-function: ease-in; opacity: 0.4; } 5% { opacity: 0; } 100% { opacity: 0; } } @keyframes kf_817_9528_scale_0 { 0% { animation-timing-function: ease-out; scale: 0.85 0.85; } 1% { animation-timing-function: ease-in-out; scale: 1 1; } 3% { animation-timing-function: ease-in; scale: 1.05 1.05; } 5% { scale: 0.95 0.95; } 100% { scale: 0.95 0.95; } }
+.ciw-design .design-scan-success{animation: kf_817_9529_opacity_0 30s linear, kf_817_9529_scale_0 30s linear; animation-iteration-count: infinite; }
+@keyframes kf_817_9529_opacity_0 { 0% { opacity: 0; } 4.333% { animation-timing-function: ease-out; opacity: 0; } 5.333% { opacity: 1; } 100% { opacity: 1; } } @keyframes kf_817_9529_scale_0 { 0% { scale: 0 0; } 4.333% { animation-timing-function: cubic-bezier(0.45, 1.45, 0.8, 1); scale: 0 0; } 5.167% { animation-timing-function: ease-in-out; scale: 1.15 1.15; } 5.833% { scale: 1 1; } 100% { scale: 1 1; } }
+.ciw-design .design-scan-check{animation: kf_817_9531_opacity_0 30s linear; animation-iteration-count: infinite; }
+@keyframes kf_817_9531_opacity_0 { 0% { opacity: 0; } 4.833% { animation-timing-function: ease-out; opacity: 0; } 5.5% { opacity: 1; } 100% { opacity: 1; } }
+.embed .ciw-design :is(.design-scan-phone,.design-scan-beam,.design-scan-success,.design-scan-check){animation:none}
+@media(prefers-reduced-motion:reduce){.ciw-design :is(.design-scan-phone,.design-scan-beam,.design-scan-success,.design-scan-check){animation:none}.ciw-design .design-scan-beam{opacity:0}}
+
+
+
+.ciw-design :is(.design-vehicle-glass,.design-course-card,.design-course-info,.design-recent-tag,.design-payment-summary,.design-pay-method){isolation:isolate}
+.ciw-design :is(.design-recent-tag,.design-payment-summary){position:relative}
+.ciw-design :is(.design-vehicle-glass,.design-course-card,.design-course-info,.design-recent-tag,.design-payment-summary,.design-pay-method):after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.22;mix-blend-mode:overlay;box-shadow:var(--glass-reflection)}

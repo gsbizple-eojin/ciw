@@ -116,6 +116,22 @@ document.addEventListener("change", (event) => {
   if (field.dataset.adminField === "branch") render();
 });
 
+document.addEventListener('keydown', event => {
+  const dialog = kiosk.querySelector('.design-discount-dialog');
+  if (!dialog) return;
+  const buttons = [...dialog.querySelectorAll('button:not(:disabled)')];
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    return handleAction(buttons[0]);
+  }
+  if (event.key !== 'Tab') return;
+  const index = buttons.indexOf(document.activeElement);
+  if (index < 0 || event.shiftKey && index === 0 || !event.shiftKey && index === buttons.length - 1) {
+    event.preventDefault();
+    buttons[event.shiftKey ? buttons.length - 1 : 0].focus();
+  }
+});
+
 document.addEventListener("input", (event) => {
   const branchSearch = event.target.closest("[data-branch-search]");
   if (branchSearch) {
