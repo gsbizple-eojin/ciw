@@ -1,7 +1,7 @@
 # v0.7 수정 규칙
 
 - 먼저 README의 파일 표와 관련 화면 ID를 확인한다. 요청과 관련된 파일·함수·CSS 클래스만 검색하고 읽는다. 전체 코드·IA·이미지를 매번 통째로 읽지 않는다.
-- Figma의 동일 ID에 `Design/screen/*` 프레임이 있으면 완료 디자인으로 보고 해당 화면의 UI 기준으로 우선 적용한다. 현재 INT-001과 CRS-001은 README에 연결한 Design 프레임을 따른다.
+- 사용자가 지정한 최신 Figma 페이지·대지가 UI 기준이다. README의 최신 적용 표를 먼저 확인한다. 별도 지정이 없는 동일 ID의 `Design/screen/*` 프레임은 완료 디자인으로 본다.
 - 화면 UI는 `assets/screens/`의 해당 기능 파일을 수정한다. 공통 계산·상태·이동·버튼 동작은 `assets/app.js`, 등록·초기화는 `assets/init.js`에서 관리한다.
 - 화면별 파일의 `apply*Screens()`는 초기화 시 한 번 호출한다. 로딩 순서는 `index.html`과 `init.js`를 따른다. 변경 없이 기존 코드 순서를 재배치하지 않는다.
 - 화면 ID·이름·목록은 두 HTML이 공유하는 `assets/screen-catalog.js` 한 곳에서 관리한다. ID·정책이 바뀔 때 관련 IA 행도 수정한다.
