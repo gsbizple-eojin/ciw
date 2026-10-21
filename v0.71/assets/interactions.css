@@ -1,0 +1,63 @@
+/* v0.71: 지정된 화면의 디자인 위에 테스트용 움직임·반응을 적용한다. */
+.ciw-design .design-card-body,.ciw-design .design-complete-body{position:absolute;left:0;top:720px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:40px;padding:56px 120px}
+.ciw-design .design-card-body>header{width:840px;display:flex;flex-direction:column;gap:16px;font-weight:600}
+.ciw-design .design-card-body>header p{height:36px;font-size:26px;line-height:32px}
+.ciw-design .design-card-body h2,.ciw-design .design-complete-body h2{width:840px;font-size:44px;line-height:52px;font-weight:600;color:#fff}
+.ciw-design .design-card-reader{width:840px;height:498px;flex:none;background:#fff;border-radius:32px}
+.ciw-design .design-entry-notice{display:flex;flex-direction:column;align-items:center;gap:16px;width:840px;height:159px;padding:24px;border:1px solid #ffffff33;border-radius:24px;background:#ffffff1f;text-align:center}
+.ciw-design .design-entry-notice strong{width:100%;font-size:32px;line-height:44px;letter-spacing:-.2px;font-weight:600;color:#ff4050}
+.ciw-design .design-entry-notice hr{width:100%;height:1px;border:0;margin:0;background:#ffffff33;flex:none}
+.ciw-design .design-entry-notice p{width:100%;font-size:26px;line-height:32px;font-weight:500;white-space:nowrap}
+.ciw-design .design-entry-image{display:flex;flex-direction:column;align-items:center;justify-content:center;width:840px;padding:24px 0;border:1px solid #ffffff33;border-radius:32px;background:#000;overflow:hidden}
+.ciw-design .design-entry-image img{display:block;width:799px;height:450px;object-fit:cover}
+.ciw-design .design-complete-receipt{width:840px;padding:30px 40px;border-radius:16px;background:#d10a2c;color:#fff;font-size:32px;line-height:44px;font-weight:600;text-align:center}
+.kiosk.height-high :is(.design-card-payment,.design-payment-complete) .design-header{top:1208px}
+.kiosk.height-high :is(.design-card-body,.design-complete-body){top:93px}
+.test-guide{color:#aab3c1;font-size:13px;line-height:1.75;margin:12px 0 0;word-break:keep-all}
+.test-scope-note{padding:16px;border:1px solid #ffffff14;border-radius:14px;background:#ffffff05}
+.test-flow-list{display:flex;flex-direction:column;gap:6px}
+.test-flow-list button{display:flex;align-items:center;gap:12px;width:100%;border:1px solid transparent;border-radius:12px;padding:12px;background:transparent;color:#9da8b8;text-align:left;transition:background 160ms,color 160ms,transform 120ms}
+.test-flow-list button>span{font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;color:#788599}
+.test-flow-list button>strong{font-size:14px;font-weight:500}
+.test-flow-list button.active{color:#fff;background:#ffffff0d;border-color:#ffffff19}
+.test-flow-list button.active>span{color:#ff778b}
+.test-flow-list button:active,.test-restart:active{transform:scale(.97)}
+.test-flow-list button:focus-visible,.review-panel button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.review-panel .test-restart{background:#d10a2c;border-color:#d10a2c;color:#fff;border-radius:12px;min-height:46px}
+.review-panel [data-test-height][aria-pressed="true"]{background:#d10a2c;color:#fff;border-color:#d10a2c}
+.test-kiosk .ciw-design button{transition:transform 480ms cubic-bezier(.16,1.35,.3,1),filter 180ms,opacity 180ms}
+.test-kiosk .ciw-design button:not(:disabled):active{transition-duration:85ms;transform:scale(.96);filter:brightness(1.08)}
+.test-kiosk .ciw-design .design-course-card:not(:disabled):active{transform:scale(.975)}
+.test-kiosk button.test-static:disabled{opacity:1;filter:none;cursor:default}
+.test-kiosk [aria-disabled="true"]{cursor:default}
+.test-kiosk .screen-timeout,.test-kiosk .design-timer{pointer-events:none}
+.test-kiosk .design-timer-ring path{animation:none}
+.test-kiosk h2:focus{outline:none}
+.test-kiosk .design-scan-illustration{overflow:hidden}
+.test-kiosk .design-scan-phone{animation:test-phone-float 2800ms ease-in-out infinite}
+.test-kiosk .design-scan-beam{animation:test-scan-beam 2400ms ease-in-out infinite}
+.test-kiosk .design-scan-success,.test-kiosk .design-scan-check{animation:none;opacity:0}
+.test-kiosk.test-is-scanning .design-scan-success{animation:test-scan-confirm 430ms cubic-bezier(.16,1.35,.3,1) 80ms both}
+.test-kiosk.test-is-scanning .design-scan-check{animation:test-check-reveal 220ms ease-out 190ms both}
+.test-kiosk.test-is-scanning .design-scan-phone{animation:none}
+.test-kiosk.test-is-scanning .design-scan-illustration{box-shadow:0 0 0 2px #d10a2c66;transition:box-shadow 180ms}
+.test-kiosk .test-card-reader{position:relative;cursor:pointer;touch-action:manipulation;transition:transform 480ms cubic-bezier(.16,1.35,.3,1),box-shadow 200ms;outline-offset:8px}
+.test-kiosk .test-card-reader:active{transform:scale(.96);transition-duration:85ms}
+.test-kiosk .test-card-reader:focus-visible{outline:3px solid #d10a2c}
+.test-reader-status{position:absolute;inset:0;border-radius:inherit;background:#f1f3f5;display:flex;flex-direction:column;gap:22px;align-items:center;justify-content:center;color:#242933;box-shadow:inset 0 0 0 2px #d10a2c26}
+.test-reader-status i{display:block;width:64px;height:64px;border:5px solid #d10a2c22;border-top-color:#d10a2c;border-radius:50%;animation:test-approval-spin 800ms linear infinite}
+.test-reader-status strong{font-family:'CIW Design',sans-serif;font-size:24px;line-height:32px;font-weight:600}
+.test-discount-feedback{position:absolute;z-index:60;left:50%;bottom:140px;translate:-50% 0;display:flex;align-items:center;justify-content:center;gap:18px;min-height:92px;max-width:920px;padding:24px 40px;background:#29292df5;box-shadow:0 12px 36px #0004;border:1px solid #ffffff14;border-radius:28px;color:#fff;white-space:nowrap;pointer-events:none;font-family:'CIW Design',sans-serif;font-size:28px;line-height:36px;font-weight:600}
+.test-discount-feedback b{display:grid;place-items:center;width:38px;height:38px;flex:none;background:#d10a2c;border-radius:50%;font-size:24px;line-height:1}
+.test-kiosk.height-high .test-discount-feedback{bottom:800px}
+@keyframes test-phone-float{0%,100%{translate:0 4px}50%{translate:0 -4px}}
+@keyframes test-scan-beam{0%,100%{opacity:.12;scale:.97}50%{opacity:.65;scale:1.02}}
+@keyframes test-scan-confirm{0%{opacity:0;scale:.4}70%{opacity:1;scale:1.12}100%{opacity:1;scale:1}}
+@keyframes test-check-reveal{from{opacity:0;translate:0 3px}to{opacity:1;translate:0 0}}
+@keyframes test-approval-spin{to{rotate:360deg}}
+@media(prefers-reduced-motion:reduce){
+  .test-kiosk *,.review-panel button{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .test-kiosk button:not(:disabled):active,.test-kiosk .test-card-reader:active{transform:none!important}
+  .test-kiosk .design-scan-beam{opacity:.2}
+  .test-kiosk.test-is-scanning .design-scan-success,.test-kiosk.test-is-scanning .design-scan-check{opacity:1}
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>CIW v0.72 · 인터랙션 테스트</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/interactions.css" />
+</head>
+<body>
+  <div class="review-shell">
+    <aside class="review-panel" aria-label="인터랙션 테스트 조작">
+      <div class="review-brand"><span class="review-kicker">CIW INTERACTION TEST</span><h1>인터랙션 테스트</h1><p>v0.72 · 레드로 채워지는 선택</p></div>
+      <section class="review-section">
+        <h2>처음부터 체험하기</h2>
+        <div class="review-grid one"><button class="test-restart" data-test-restart>처음부터 다시 테스트</button></div>
+        <p class="test-guide">할인권은 사용하거나 건너뛸 수 있어요.<br>스캔 안내와 카드 리더기를 눌러 다음 단계로 진행하세요.</p>
+        <p class="test-guide">누른 버튼이 오른쪽에서 왼쪽으로 메인 레드로 채워지고, 은은한 광택이 스친 뒤 다음 단계로 이어집니다.</p>
+      </section>
+      <section class="review-section">
+        <h2>테스트할 화면</h2>
+        <nav class="test-flow-list" id="testFlow" aria-label="7개 화면 바로가기"></nav>
+      </section>
+      <section class="review-section">
+        <h2>조작 높이</h2>
+        <div class="segmented"><button data-test-height="low">기본 화면</button><button data-test-height="high">높은 화면</button></div>
+      </section>
+      <section class="review-section current-review" aria-live="polite"><span class="review-label">현재 화면</span><strong id="currentScreenName">인트로</strong><p id="currentScreenReq">KIO-INT-001</p><p class="review-note" id="currentScreenNote"></p></section>
+      <p class="test-guide test-scope-note">카드 결제완료까지 7개 화면만 체험합니다. 자동 초기화는 멈춰두었고, 결제완료 화면에서 테스트가 끝납니다.</p>
+    </aside>
+    <main class="stage" id="stage"><div class="kiosk-shell" id="kioskShell"><section class="kiosk" id="kiosk" aria-label="컴인워시 키오스크 인터랙션 테스트"></section></div></main>
+  </div>
+  <script src="./assets/screen-catalog.js"></script>
+  <script src="./assets/app.js"></script>
+  <script src="./assets/screens/intro.js"></script>
+  <script src="./assets/screens/course.js"></script>
+  <script src="./assets/screens/payment.js"></script>
+  <script src="./assets/screens/completion.js"></script>
+  <script src="./assets/init.js"></script>
+</body>
+</html>
