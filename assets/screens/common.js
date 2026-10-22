@@ -29,13 +29,8 @@ function helpScreen() {
 
 
 function timeoutPopup() {
-  const seconds = String(Math.max(0, state.timeoutSeconds)).padStart(2, "0");
-  return `<div class="timeout-overlay"><section class="timeout-popup" role="dialog" aria-modal="true" aria-label="메인화면 이동 안내">
-    <h3>계속 이용하시겠습니까?</h3>
-    <p>잠시 후 첫 화면으로 이동합니다.</p>
-    <div class="timeout-countdown"><span>남은 시간</span><strong>00:${seconds}</strong></div>
-    <div class="timeout-actions"><button class="large-button light" data-action="timeout-home">처음으로</button><button class="large-button red" data-action="timeout-continue">계속 이용</button></div>
-  </section></div>`;
+  const seconds=String(Math.max(0,state.timeoutSeconds)).padStart(2,'0');
+  return testDialog({title:'계속 이용하시겠습니까?',content:`<p class="test-dialog-description">잠시 후 첫 화면으로 이동합니다.</p><div class="timeout-countdown test-dialog-inset"><span>남은 시간</span><strong>00:${seconds}</strong></div>`,className:'test-timeout',node:'543:9395',actions:[{label:'계속 이용',action:'timeout-continue'}],secondary:{label:'처음으로',action:'timeout-home'}});
 }
 
 
@@ -76,8 +71,24 @@ function helpV07() {
 
 renderers.help = helpV07;
 
-renderers.networkError = () => `<div class="v07-network"><div class="v07-network-icon" role="img" aria-label="캐릭터 활용 자리 표시"><span>캐릭터 활용</span></div><h2>네트워크에 연결할 수 없어요</h2></div>`;
+renderers.networkError = () => testSystemState('network');
+renderers.unavailable = () => testSystemState('unavailable');
+renderers.qrMismatch = () => courseScreen(testDialog({title:'인식된 세차권의 코스 정보가<br>현재 선택된 코스와 일치하지 않습니다.',content:'<p class="test-dialog-description">그래도 사용하시겠습니까?</p><div class="test-dialog-inset"><span>인식된 세차권 코스</span><strong>스탠다드</strong></div>',className:'test-qr-mismatch',node:'543:9465',actions:[{label:'세차권 사용',action:'v07-mismatch-use'}],secondary:{label:'사용 안함',action:'qr-mismatch-close'}}));
 
-renderers.qrMismatch = () => v06Intro(modalPopup({title:'인식된 세차권의 코스 정보가<br>현재 선택된 코스와 일치하지 않습니다.',content:'<p>그래도 사용하시겠습니까?<br><br>인식된 세차권 코스 : <strong>스탠다드</strong></p>',className:'qr-guide-modal',actions:[{label:'세차권 사용',action:'v07-mismatch-use'}],secondary:{label:'사용 안함',action:'qr-mismatch-close'}}));
 
+}
+
+function testDialog({title,content,className='',node='',actions,secondary}) {
+  return `<div class="modal-overlay test-dialog-overlay" data-design-node="${node}"><section class="modal-popup test-dialog ${className}" role="dialog" aria-modal="true" aria-label="${title.replaceAll('<br>',' ')}"><div class="test-dialog-content"><h3>${title}</h3>${content}</div>${popupActions(actions,secondary)}</section></div>`;
+}
+
+function testSystemState(kind) {
+  const network=kind==='network',node=network?'9071':'9069',mask=`test-system-mask-${kind}`;
+  return `<div class="ciw-design test-system-state" data-design-node="543:${node}"><section><svg width="360" height="360" role="img" aria-label="${network?'네트워크 오류':'세차 이용 불가'}"><defs><mask id="${mask}" style="mask-type:alpha"><image href="${testAsset(`${node}-imgCiw21`)}" width="360" height="360" /></mask></defs><image href="${testAsset(`${node}-imgCiw22`)}" width="360" height="360" preserveAspectRatio="xMidYMid ${network?'slice':'meet'}" mask="url(#${mask})" /></svg><div><h2>${network?'네트워크 연결 오류':'세차 이용 불가'}</h2><h3>이용에 불편을 드려 죄송합니다.</h3><p>${network?'현재 키오스크 인터넷 연결에 오류가 발생했습니다.<br>네트워크 연결 상태를 확인해 주세요.':'현재는 세차이용이 불가하오니 회차 부탁드립니다.<br>빠른 복구를 위해 최선을 다하겠습니다.'}</p></div></section></div>`;
+}
+
+
+function testResultDialog({type='success',title,message='',action='close-alert',button='확인',showCode=false}) {
+  const error=type==='error';
+  return testDialog({title,content:`<div class="test-result-icon ${error?'error':''}" aria-hidden="true"><span><img src="${testAsset(error?'8687-img3D1':'8684-img3D1')}" alt="" /></span></div>${message?`<p class="test-dialog-description">${message}</p>`:''}${showCode?'<p class="test-result-code">[오류코드 0000]</p>':''}`,className:'test-result-dialog',node:error?'543:8687':'543:8684',actions:[{label:button,action}],secondary:null});
 }

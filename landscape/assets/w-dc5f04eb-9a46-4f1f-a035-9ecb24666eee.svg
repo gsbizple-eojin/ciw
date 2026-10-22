@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="42.9687" height="114.699" viewBox="0 0 42.9687 114.699" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="&#236;&#185;&#180;&#235;&#147;&#156; &#235;&#166;&#172;&#235;&#141;&#148; &#236;&#153;&#184;&#236;&#184;&#161; &#234;&#178;&#189;&#236;&#130;&#172;">
+<use xlink:href="#stroke0_0_413" fill="url(#paint0_linear_0_413)"/>
+<mask id="stroke1_0_413" fill="white">
+<use xlink:href="#stroke0_0_413"/>
+</mask>
+<path d="M6.0307 0H36.938C40.2687 0 42.9687 2.73879 42.9687 6.11725V108.581C42.9687 111.96 40.2687 114.699 36.938 114.699H6.0307C2.70003 114.699 0 111.96 0 108.581V6.11725C0 2.73879 2.70003 0 6.0307 0Z" stroke-width="0.904605" stroke="#030405" mask="url(#stroke1_0_413)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_413" x1="21.4844" y1="0" x2="21.4844" y2="114.699" gradientUnits="userSpaceOnUse">
+<stop stop-color="#111214"/>
+<stop offset="0.7" stop-color="#060708"/>
+<stop offset="1" stop-color="#343638"/>
+</linearGradient>
+<path id="stroke0_0_413" d="M6.0307 0H36.938C40.2687 0 42.9687 2.73879 42.9687 6.11725V108.581C42.9687 111.96 40.2687 114.699 36.938 114.699H6.0307C2.70003 114.699 0 111.96 0 108.581V6.11725C0 2.73879 2.70003 0 6.0307 0Z"/>
+</defs>
+</svg>

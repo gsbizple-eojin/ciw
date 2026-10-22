@@ -14,29 +14,12 @@ function completionContent(message, waiting, receipt = false) {
 }
 
 
-function paymentCompleteScreen(overlay = "", waiting = state.frontCar) {
-  return standardScreen({
-    title: "",
-    classes: "ticket-completion-screen payment-completion-screen completion-v06 payment-completion-waiting",
-    reachable: false,
-    status: kioskInfoBar(waiting),
-    content: completionContent("결제가 완료되었습니다.", waiting, true),
-    overlay,
-    footerType: "none",
-  });
+function paymentCompleteScreen(overlay = '', waiting = state.frontCar) {
+  return testPaymentComplete(overlay,waiting);
 }
 
-
-function commonCompleteScreen(waiting = false, overlay = "") {
-  return standardScreen({
-    title: "",
-    classes: "ticket-completion-screen completion-v06 payment-completion-waiting",
-    reachable: false,
-    status: kioskInfoBar(waiting),
-    content: completionContent("세차권 사용이 완료되었습니다.", waiting),
-    overlay,
-    footerType: "none",
-  });
+function commonCompleteScreen(waiting = false, overlay = '') {
+  return testPaymentComplete(overlay,waiting,true);
 }
 
 
@@ -48,19 +31,11 @@ function formattedPhone() {
 }
 
 
-function receiptScreen(extraOverlay = "") {
-  const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "전체삭제", "0", "←"];
-  return paymentCompleteScreen(modalPopup({
-    title: "입력하신 휴대폰 번호로 영수증이 발송됩니다.",
-    content: `
-      <div class="phone-display">${formattedPhone()}</div>
-      <div class="keypad">${keys.map((key) => `<button data-action="key" data-key="${key}">${key}</button>`).join("")}</div>
-      <div class="terms-preview" tabindex="0"><strong>휴대폰 번호 수집 및 이용 동의</strong><p>영수증 발송을 위해 휴대폰 번호를 수집합니다.</p><p>수집 항목: 휴대폰 번호<br />이용 목적: 카카오톡 영수증 발송<br />보관 기간: 협의/확인 필요</p><span>동의를 거부할 수 있으며, 동의하지 않으면 카카오톡 영수증 발급을 이용할 수 없습니다.</span><span>※ 처리 위탁 범위와 최종 약관 문구는 협의/확인 필요</span></div>
-      ${state.formError ? `<p class="form-error">${state.formError}</p>` : ""}`,
-    className: "receipt-modal",
-    actions: [{ label: `<span class="receipt-action-label"><small>수집/이용 약관에 동의 후</small><strong>영수증 발급</strong></span>`, action: "send-receipt" }],
-    secondary: { label: "취소", action: "close-dialog" },
-  }) + extraOverlay);
+function receiptScreen(extraOverlay = '') {
+  const keys=['1','2','3','4','5','6','7','8','9','전체삭제','0','←'];
+  const terms=['영수증 발송을 위해 휴대폰 번호를 수집합니다.','수집 항목 : 휴대폰 번호 · 이용 목적: 카카오톡 영수증 발송 · 보관 기간: 협의/확인 필요','동의를 거부할 수 있으며, 동의하지 않으면 카카오톡 영수증 발급을 이용할 수 없습니다.'];
+  const dialog=testDialog({title:'입력하신 휴대폰 번호로<br>영수증이 발송됩니다.',className:'test-receipt-dialog',node:'543:8690',content:`<div class="test-receipt-phone" aria-live="polite">${state.phone==='010'?'010 -':formattedPhone()}</div><div class="test-receipt-keypad">${keys.map(key=>`<button data-action="key" data-key="${key}" ${['전체삭제','←'].includes(key)&&!state.phone?'disabled':''} aria-label="${key==='←'?'한 글자 삭제':key}">${key==='←'?`<img src="${testAsset('8690-imgIcBack24Px')}" alt="" />`:key}</button>`).join('')}</div><div class="test-receipt-terms" tabindex="0"><strong>휴대폰 번호 수집 및 이용 동의</strong>${terms.map(t=>`<p><img src="${testAsset('8690-imgLabelBaseKiosk')}" alt="" />${t}</p>`).join('')}</div>${state.formError?`<p class="form-error">${state.formError}</p>`:''}`,actions:[{label:'<small>수집/이용약관에 동의 후</small><span>영수증 받기</span>',action:'send-receipt'}],secondary:{label:'취소',action:'close-dialog'}});
+  return paymentCompleteScreen(dialog+extraOverlay);
 }
 
 
@@ -83,12 +58,18 @@ completionContent = function(message, waiting, receipt = false) {
 
 function completionV07(waiting, ticket) {return `<div class="v07-completion-screen">${adZone()}<div class="v07-completion-status">${kioskInfoBar(waiting)}</div>${completionContent(ticket?'세차권 사용이 완료되었습니다.':'결제가 완료되었습니다.',waiting,!ticket)}</div>`;}
 
-renderers.paymentComplete = () => completionV07(false,false);
+renderers.paymentComplete = () => testPaymentComplete();
+renderers.receiptSent = () => paymentCompleteScreen(testResultDialog({title:'입력하신 휴대폰 번호로<br>영수증을 발송 했습니다.',action:'receipt-sent-close'}));
 
-renderers.paymentCompleteWaiting = () => completionV07(true,false);
+renderers.paymentCompleteWaiting = () => testPaymentComplete('',true);
 
-renderers.commonComplete = () => completionV07(false,true);
+renderers.commonComplete = () => testPaymentComplete('',false,true);
 
-renderers.commonCompleteWaiting = () => completionV07(true,true);
+renderers.commonCompleteWaiting = () => testPaymentComplete('',true,true);
 
+}
+
+function testPaymentComplete(overlay = '', waiting = false, ticket = false) {
+  const node=ticket?waiting?'543:8446':'543:8460':waiting?'543:8431':'543:8416';
+  return `<div class="ciw-design test-completion" data-design-node="${node}">${testBackground()}${designDisplay('payment')}${designHeader(true,'payment')}<main class="test-completion-body"><h2>${ticket?'세차권 사용이 완료되었습니다.':'결제가 완료되었습니다.'}</h2><div class="test-entry-notice"><div><strong>${waiting?'앞차 세차가 진행중입니다.':'잠시 후 세차장 문이 열립니다.'}</strong><hr><p>${waiting?'잠시 대기해주세요.':'문이 열리면 유도등 지시에 따라 천천히 입장해 주세요.'}</p></div><span><img src="${testAsset('8416-imgCiw21')}" alt="" /></span></div><div class="test-entry-art"><img src="${testAsset('8416-imgCarWashBannerV4WhitePanelTextLoopOptimized2')}" alt="천천히 진입 후 정지 표시가 켜지면 정차하세요. 사이드미러 접기, 기어 P, 내기순환을 확인하세요." /></div>${ticket||state.receiptIssued?'':'<button class="v07-red" data-action="receipt-yes">영수증 받기 (카카오톡 발송)</button>'}</main>${overlay}</div>`;
 }

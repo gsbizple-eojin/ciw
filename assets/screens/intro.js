@@ -59,7 +59,7 @@ function applyIntroScreens() {
   introScreen = function(overlay = '', options = {}) {
     if (state.screen !== 'intro') return v06Intro(overlay, options);
     const choice = high => `<button class="design-vehicle" data-action="start" data-height="${high ? 'high' : 'low'}"><span class="design-vehicle-glass"><strong>${high ? 'SUV / RV / 대형차량' : '일반승용차 / 소형차량'}</strong><small>화면을 ${high ? '높게' : '낮게'} 조정합니다.</small></span><img src="${designAsset(high ? 'v03-intro-imgTypeSuvSizeLarge' : 'v03-intro-imgTypeSedanSizeLarge')}" alt="${high ? 'SUV' : 'SEDAN'}" /></button>`;
-    return `<div class="ciw-design design-intro" data-design-node="817:7296">${designBackground('intro')}${designHeader()}<main class="design-intro-body"><header><h2>차종을 선택해 주세요</h2><p>선택한 차종에 따라 키오스크 화면 높이가 변경됩니다.</p></header><div class="design-intro-content"><div class="design-vehicles">${choice(true)}${choice(false)}</div>${designAppBanner('intro')}</div><p class="design-welcome-brand">WEL<b>COME IN WASH</b></p></main>${adminEntryHotspot()}${overlay}</div>`;
+    return `<div class="ciw-design design-intro" data-design-node="887:11933">${designBackground('intro')}<header class="design-intro-info">${state.adminSettings.branch} / ${state.adminSettings.machineName.replace(/-/g,' ')} / ${state.communicationError?'통신에러':state.frontCar?'앞차 세차 중':'대기중'}</header><main class="design-intro-body"><header><h2>차종을 선택해 주세요</h2><p>선택한 차종에 따라 키오스크 화면 높이가 변경됩니다.</p></header><div class="design-intro-content"><div class="design-vehicles">${choice(true)}${choice(false)}</div>${designAppBanner('intro')}</div><p class="design-welcome-brand">WEL<b>COME IN WASH</b></p></main>${adminEntryHotspot()}${overlay}</div>`;
   };
   renderers.intro = () => introScreen();
 }

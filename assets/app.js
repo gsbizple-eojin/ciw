@@ -1,14 +1,134 @@
 const CIW_ASSETS = {
-  "v03-intro-imgQrL": "assets/images/design-intro-imgQrL.png",
+  "test-course-latest-imgElement": "landscape/assets/w-e9d0c2da-5a0c-4d4c-af1c-f2dd0afb9344.svg",
+  "test-course-latest-imgElement1": "landscape/assets/w-932f005d-886f-4a65-950b-00a0359de49c.svg",
+  "test-course-latest-imgElement2": "landscape/assets/w-6bb83128-8ca3-4a6a-9c68-448aec9a3597.svg",
+  "test-course-latest-imgElement3": "landscape/assets/w-72be373a-dee5-4f44-bdb3-bf383152f6f2.svg",
+
+  "test-8356-imgEllipse3": "assets/images/test-8356-imgEllipse3.png",
+  "test-8356-imgRectangle1430106605": "assets/images/test-8356-imgRectangle1430106605.svg",
+  "test-8356-imgVector2": "assets/images/test-8356-imgVector2.svg",
+  "test-8356-imgFillIcon": "assets/images/test-8356-imgFillIcon.svg",
+  "test-8356-imgCheckStroke": "assets/images/test-8356-imgCheckStroke.svg",
+  "test-8356-imgIPhone16Pro": "assets/images/test-8356-imgIPhone16Pro.png",
+  "test-8356-imgChatGpt202610190500362": "assets/images/test-8341-imgChatGpt202610190500362.png",
+  "test-8356-imgChatGpt202610190500361": "assets/images/test-8401-imgChatGpt202610190500361.svg",
+  "test-8371-imgEllipse3": "assets/images/test-8356-imgEllipse3.png",
+  "test-8371-imgRectangle1430106605": "assets/images/test-8356-imgRectangle1430106605.svg",
+  "test-8371-imgVector2": "assets/images/test-8356-imgVector2.svg",
+  "test-8371-imgFillIcon": "assets/images/test-8356-imgFillIcon.svg",
+  "test-8371-imgCheckStroke": "assets/images/test-8356-imgCheckStroke.svg",
+  "test-8371-imgIPhone16Pro": "assets/images/test-8356-imgIPhone16Pro.png",
+  "test-8371-imgChatGpt202610190500362": "assets/images/test-8341-imgChatGpt202610190500362.png",
+  "test-8371-imgChatGpt202610190500361": "assets/images/test-8401-imgChatGpt202610190500361.svg",
+  "test-8386-imgGroup5": "assets/images/test-8386-imgGroup5.svg",
+  "test-8386-imgEllipse3": "assets/images/test-8356-imgEllipse3.png",
+  "test-8386-imgRectangle1430106605": "assets/images/test-8386-imgRectangle1430106605.svg",
+  "test-8386-imgGroup8": "assets/images/test-8386-imgGroup8.svg",
+  "test-8386-imgVector2": "assets/images/test-8386-imgVector2.svg",
+  "test-8386-imgFillIcon": "assets/images/test-8356-imgFillIcon.svg",
+  "test-8386-imgGroup1": "assets/images/test-8386-imgGroup5.svg",
+  "test-8386-imgGroup4": "assets/images/test-8386-imgGroup4.svg",
+  "test-8386-imgGroup7": "assets/images/test-8386-imgGroup5.svg",
+  "test-8386-imgCheckStroke": "assets/images/test-8356-imgCheckStroke.svg",
+  "test-8386-imgChatGpt202610190500362": "assets/images/test-8341-imgChatGpt202610190500362.png",
+  "test-8386-imgGroup2": "assets/images/test-8386-imgGroup2.svg",
+  "test-8386-imgGroup3": "assets/images/test-8386-imgGroup3.svg",
+  "test-8386-imgChatGpt202610190500361": "assets/images/test-8401-imgChatGpt202610190500361.svg",
+  "test-8386-imgGroup6": "assets/images/test-8386-imgGroup6.svg",
+  "test-8386-imgGroup9": "assets/images/test-8386-imgGroup5.svg",
+  "test-8386-imgGroup": "assets/images/test-8386-imgGroup.svg",
+  "test-8431-imgCiw21": "assets/images/test-8416-imgCiw21.png",
+  "test-8431-imgCarWashBannerV4WhitePanelTextLoopOptimized2": "assets/images/test-8416-imgCarWashBannerV4WhitePanelTextLoopOptimized2.png",
+  "test-8460-imgCiw21": "assets/images/test-8416-imgCiw21.png",
+  "test-8460-imgCarWashBannerV4WhitePanelTextLoopOptimized2": "assets/images/test-8416-imgCarWashBannerV4WhitePanelTextLoopOptimized2.png",
+  "test-8446-imgCiw21": "assets/images/test-8416-imgCiw21.png",
+  "test-8446-imgCarWashBannerV4WhitePanelTextLoopOptimized2": "assets/images/test-8416-imgCarWashBannerV4WhitePanelTextLoopOptimized2.png",
+  "test-8684-img3D1": "assets/images/test-toast-success.png",
+  "test-8687-img3D1": "assets/images/test-8687-img3D1.png",
+
+  "test-voucher-divider": "assets/images/test-voucher-divider.svg",
+  "test-9444-imgKioskIcon": "assets/images/test-toast-success.png",
+  "test-9071-imgCiw22": "assets/images/test-9071-imgCiw22.png",
+  "test-9071-imgCiw21": "assets/images/test-9071-imgCiw21.svg",
+  "test-9069-imgCiw22": "assets/images/test-9069-imgCiw22.png",
+  "test-9069-imgCiw21": "assets/images/test-9071-imgCiw21.svg",
+  "test-8690-imgIcBack24Px": "assets/images/test-8690-imgIcBack24Px.svg",
+  "test-8690-imgLabelBaseKiosk": "assets/images/test-8690-imgLabelBaseKiosk.svg",
+
+  "test-payment-app": "assets/images/test-payment-app.svg",
+  "test-payment-card": "assets/images/test-payment-card.svg",
+  "test-course-character": "assets/images/test-course-character.png",
+  "test-course-character-mask": "assets/images/test-course-character-mask.svg",
+  "test-8341-imgGroup1": "assets/images/test-8341-imgGroup1.svg",
+  "test-8341-imgVector2": "assets/images/test-8341-imgVector2.svg",
+  "test-8341-imgGroup": "assets/images/test-8341-imgGroup.svg",
+  "test-8341-imgEllipse3": "assets/images/test-8341-imgEllipse3.png",
+  "test-8341-imgRectangle1430106619Stroke": "assets/images/test-8341-imgRectangle1430106619Stroke.svg",
+  "test-8341-imgChatGpt202610190500362": "assets/images/test-8341-imgChatGpt202610190500362.png",
+  "test-8341-imgX": "assets/images/test-8341-imgX.svg",
+  "test-8341-imgChatGpt202610190500361": "assets/images/test-8341-imgChatGpt202610190500361.svg",
+  "test-8341-imgBg": "assets/images/test-8341-imgBg.png",
+  "test-8341-imgRectangle1430106605": "assets/images/test-8341-imgRectangle1430106605.svg",
+  "test-8401-img4": "assets/images/test-8401-img4.svg",
+  "test-8401-imgLed3": "assets/images/test-8401-imgLed3.svg",
+  "test-8401-img15": "assets/images/test-8401-img15.svg",
+  "test-8401-imgVector6672": "assets/images/test-8401-imgVector6672.svg",
+  "test-8401-img10": "assets/images/test-8401-img10.svg",
+  "test-8401-img13": "assets/images/test-8401-img13.svg",
+  "test-8401-imgUnion": "assets/images/test-8401-imgUnion.svg",
+  "test-8401-img12": "assets/images/test-8401-img12.svg",
+  "test-8401-img": "assets/images/test-8401-img.svg",
+  "test-8401-img2": "assets/images/test-8401-img2.svg",
+  "test-8401-imgLed": "assets/images/test-8401-imgLed.svg",
+  "test-8401-img8": "assets/images/test-8401-img8.svg",
+  "test-8401-imgLed4": "assets/images/test-8401-imgLed4.svg",
+  "test-8401-imgLed1": "assets/images/test-8401-imgLed1.svg",
+  "test-8401-img7": "assets/images/test-8401-img7.svg",
+  "test-8401-imgUnion1": "assets/images/test-8401-imgUnion1.png",
+  "test-8401-img6": "assets/images/test-8401-img6.svg",
+  "test-8401-imgLed2": "assets/images/test-8401-imgLed2.svg",
+  "test-8401-img16": "assets/images/test-8401-img16.svg",
+  "test-8401-img5": "assets/images/test-8401-img5.svg",
+  "test-8401-img17": "assets/images/test-8401-img17.svg",
+  "test-8401-imgImg": "assets/images/test-8401-imgImg.svg",
+  "test-8401-imgGroup1772515501": "assets/images/test-8401-imgGroup1772515501.svg",
+  "test-8401-img9": "assets/images/test-8401-img9.svg",
+  "test-8401-img11": "assets/images/test-8401-img11.svg",
+  "test-8401-imgChatGpt202610190500362": "assets/images/test-8341-imgChatGpt202610190500362.png",
+  "test-8401-img14": "assets/images/test-8401-img14.svg",
+  "test-8401-img3": "assets/images/test-8401-img3.svg",
+  "test-8401-imgChatGpt202610190500361": "assets/images/test-8401-imgChatGpt202610190500361.svg",
+  "test-8401-img1": "assets/images/test-8401-img1.svg",
+  "test-8416-imgCarWashBannerV4WhitePanelTextLoopOptimized2": "assets/images/test-8416-imgCarWashBannerV4WhitePanelTextLoopOptimized2.png",
+  "test-8416-imgCiw21": "assets/images/test-8416-imgCiw21.png",
+  "test-8563-imgSample01": "assets/images/design-course-imgSample01.png",
+  "test-8563-imgIcBack24Px": "assets/images/v03-popup-imgIcBack24Px.svg",
+  "test-8563-imgTrackStroke": "assets/images/test-8563-imgTrackStroke.svg",
+  "test-8563-imgElement1": "assets/images/test-8563-imgElement1.svg",
+  "test-8563-imgIcon": "assets/images/test-8563-imgIcon.svg",
+  "test-8563-imgLogo": "assets/images/design-course-imgLogo.svg",
+  "test-8563-imgIcFilledInfo24Px": "assets/images/test-8563-imgIcFilledInfo24Px.svg",
+  "test-8563-imgElement": "assets/images/test-8563-imgElement.svg",
+  "test-8563-imgElement3": "assets/images/test-8563-imgElement3.svg",
+  "test-8563-imgAppBannerBgGrayCharacter": "assets/images/design-course-imgAppBannerBgGray.png",
+  "test-8563-imgElement2": "assets/images/test-8563-imgElement2.svg",
+  "test-8618-imgIcCheck24Px": "assets/images/test-8618-imgIcCheck24Px.svg",
+  "test-8618-imgIcCoupon24Px": "assets/images/test-8618-imgIcCoupon24Px.svg",
+  "test-8618-imgIcReceipt24Px": "assets/images/test-8618-imgIcReceipt24Px.svg",
+  "test-8618-imgIcPhone24Px": "assets/images/test-8618-imgIcPhone24Px.svg",
+  "test-9511-imgIcArrowRight24Px": "assets/images/test-9511-imgIcArrowRight24Px.svg",
+  "test-9511-imgIcClose24Px": "assets/images/test-9511-imgIcClose24Px.svg",
+
+  "v03-intro-imgQrL": "landscape/assets/cf9b53a6-3f69-4756-a146-b99921c1cbef.png",
   "v03-intro-imgAppBannerBg": "assets/images/v03-intro-imgAppBannerBg.png",
   "v03-intro-imgShadow": "assets/images/v03-intro-imgShadow.svg",
   "v03-intro-imgTypeSuvSizeLarge": "assets/images/design-intro-imgSuv.png",
   "v03-intro-imgTypeSedanSizeLarge": "assets/images/design-intro-imgSedan.png",
   "v03-intro-imgRectangle39592066": "assets/images/design-intro-imgRectangle39592066.png",
-  "v03-intro-imgElement": "assets/images/v03-intro-imgElement.svg",
-  "v03-intro-imgElement1": "assets/images/v03-intro-imgElement1.svg",
-  "v03-intro-imgElement2": "assets/images/v03-intro-imgElement2.svg",
-  "v03-intro-imgElement3": "assets/images/design-intro-imgElement3.svg",
+  "v03-intro-imgElement": "assets/images/intro-74bfeee1-a077-4ae9-808e-cf04f3cfc589.svg",
+  "v03-intro-imgElement1": "assets/images/intro-8b53f5a8-6d2f-439a-99bc-bc2d9810263b.svg",
+  "v03-intro-imgElement2": "assets/images/intro-0fed3253-a5f6-44fd-8c4e-7746c1c092c4.svg",
+  "v03-intro-imgElement3": "assets/images/intro-f675c750-b0e7-47d8-973f-4892749104f3.svg",
   "v03-course-imgQrS": "assets/images/design-intro-imgQrL.png",
   "v03-course-imgAppBannerBgGray": "assets/images/design-course-imgAppBannerBgGray.png",
   "v03-course-imgShadow": "assets/images/design-course-imgShadow.svg",
@@ -447,7 +567,7 @@ function modalPopup({ title, content, className = "", role = "dialog", actions =
 
 
 function commonToastMessage(message) {
-  return `<div class="toast-dim" aria-hidden="true"></div><div class="toast-message" role="status">${message}</div>`;
+  return `<div class="toast-dim test-toast-dim" aria-hidden="true"></div><div class="toast-message test-toast" role="status" data-design-node="543:9444"><span class="test-toast-icon"><img src="${testAsset('9444-imgKioskIcon')}" alt="" /></span><span>${message}</span></div>`;
 }
 
 
@@ -458,6 +578,7 @@ function completionRoute(kind) {
 
 
 function alertPopup({ type = "success", title, message = "", action = "close-alert", button = "확인", showCode = type === "error" }) {
+  if (['payment','paymentMethods','cardPay','cardPayExternal','appPay','mobileVoucher','voucherUse','voucherAdditional','voucherError','paperCoupon','paperUse','paperAdditional','paperError','discountUse','receipt','receiptError','receiptSent','error'].includes(state.screen)) return testResultDialog({type,title,message,action,button,showCode});
   const copy = [title, message].filter(Boolean).join(" ");
   return `<div class="alert-overlay"><div class="alert-popup" role="alertdialog" aria-modal="true"><div class="result-icon ${type === "error" ? "error" : ""}">${type === "error" ? "!" : "✓"}</div><p class="alert-message">${copy}</p>${showCode ? '<span class="alert-code">[오류코드 0000]</span>' : ""}${popupActions([{ label: button, action }], null)}</div></div>`;
 }
@@ -566,7 +687,7 @@ function startAutomaticFlow(screen) {
     paperCoupon: ["paper-use", 4200],
   };
   if (screen === "cardPay") {
-    state.timer = window.setTimeout(() => go("cardPayExternal"), 800);
+    state.timer = window.setTimeout(() => go(completionRoute("payment")), 4200);
     return;
   }
   if (screen === "cardPayExternal") {
@@ -1008,7 +1129,19 @@ function applyV07Actions() {
 const v06HandleAction = handleAction;
 handleAction = function(target) {
   const action=target.dataset.action;
-  if(action === 'back' && ['payment','discountUse','paymentMobileApplied','paymentPaperApplied','paymentDiscountMobileApplied'].includes(state.screen)) {
+  if(action === 'timeout-continue' && state.screen === 'timeout') {state.timeoutVisible=false;return go('course');}
+  if(action === 'voucher-cancel' || action === 'paper-cancel') return go('payment');
+  if(action === 'payment-next') return go(payableAmount() === 0 ? completionRoute('payment') : 'paymentMethods');
+  if(action === 'back' && ['paymentMethods','discountUse','mobileVoucher','paperCoupon','paymentMobileApplied','paymentPaperApplied','paymentDiscountMobileApplied'].includes(state.screen)) return go('payment');
+  if(action === 'back' && ['cardPay','appPay'].includes(state.screen)) return go('paymentMethods');
+  if(action === 'skip-discount') {state.discountValidationMessage='';return go('payment');}
+  if(['voucher-complete','paper-complete','voucher-partial','paper-partial'].includes(action)) {
+    const mobile=action.startsWith('voucher-');
+    state[mobile?'mobileVoucherAmount':'paperCouponAmount']=action.endsWith('-partial')?Math.min(4000,payableAmount()):payableAmount();
+    state[mobile?'mobileVoucherUsed':'paperCouponUsed']=true;
+    return go(payableAmount() === 0 ? completionRoute('payment') : 'payment');
+  }
+  if(action === 'back' && state.screen === 'payment') {
     resetPaymentAdjustments(); state.history=[]; return go('course',false);
   }
   if(action==='course-info') {go('courseInfo');if(!embedMode)state.timer=window.setTimeout(()=>{state.history.pop();go('course',false);},5000);return;}

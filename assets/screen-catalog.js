@@ -3,7 +3,7 @@ window.CIW_SCREEN_CATALOG = {
   "intro": {
     "label": "KIO-INT-001 인트로",
     "req": "IA·Figma v0.7",
-    "note": "미적용",
+    "note": "최신 인트로 디자인 적용 · 차종별 화면 높이 선택 및 QR 인식",
     "type": "페이지"
   },
   "course": {
@@ -20,20 +20,26 @@ window.CIW_SCREEN_CATALOG = {
   },
   "discountScan": {
     "label": "KIO-DSC-001 세차 할인권 등록",
-    "req": "IA·Figma v0.7",
-    "note": "5초 무응답 시 팝업 닫기",
+    "req": "Figma test · 543:8678",
+    "note": "코스 선택 위 팝업 · 왼쪽 사용 / 오른쪽 사용 안함",
     "type": "팝업"
   },
   "discountUse": {
     "label": "KIO-DSC-002 세차 할인권 사용",
+    "req": "Figma test · 543:8341",
+    "note": "바코드 인식 후 할인 적용",
+    "type": "페이지"
+  },
+  "payment": {
+    "label": "KIO-PAY-001 할인 및 보조 결제수단 선택",
     "req": "IA·Figma v0.7",
     "note": "30초 무응답 시 <타임아웃> 팝업 노출",
     "type": "페이지"
   },
-  "payment": {
-    "label": "KIO-PAY-001 결제수단선택",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+  "paymentMethods": {
+    "label": "KIO-PAY-002 결제수단 선택",
+    "req": "Figma test · 543:8660",
+    "note": "이전으로: 할인 및 보조 결제수단 선택으로 복귀",
     "type": "페이지"
   },
   "cardPay": {
@@ -44,56 +50,56 @@ window.CIW_SCREEN_CATALOG = {
   },
   "cardPayExternal": {
     "label": "KIO-PAY-102 카드결제 (외부 팝업)",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+    "req": "Figma test · 기존 외부 제공 시안",
+    "note": "새 카드 안내 화면 위에 외부 제공 창 유지",
     "type": "외부 팝업"
   },
   "appPay": {
     "label": "KIO-PAY-201 컴인워시 앱 결제",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+    "req": "Figma test · 543:8356",
+    "note": "앱 바코드 인식 후 결제 완료",
     "type": "페이지"
   },
   "mobileVoucher": {
     "label": "KIO-PAY-301 모바일 상품권 결제",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+    "req": "Figma test · 543:8371",
+    "note": "상품권 인식 후 사용 확인",
     "type": "페이지"
   },
   "voucherUse": {
     "label": "KIO-PAY-302 모바일 상품권 사용",
-    "req": "IA·Figma v0.7",
-    "note": "5초 무응답 시 팝업 닫기",
+    "req": "Figma test · 543:8681",
+    "note": "추가 결제 없으면 바로 결제 완료",
     "type": "팝업"
   },
   "voucherAdditional": {
     "label": "KIO-PAY-303 모바일 상품권 사용 (추가결제)",
-    "req": "IA·Figma v0.7",
-    "note": "5초 무응답 시 팝업 닫기",
+    "req": "Figma test · 543:8696",
+    "note": "잔액이 남으면 PAY-001, 없으면 바로 완료",
     "type": "팝업"
   },
   "paperCoupon": {
     "label": "KIO-PAY-401 할인 쿠폰 결제",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+    "req": "Figma test · 543:8386",
+    "note": "쿠폰 인식 후 사용 확인",
     "type": "페이지"
   },
   "paperUse": {
     "label": "KIO-PAY-402 할인 쿠폰 사용",
-    "req": "IA·Figma v0.7",
-    "note": "5초 무응답 시 팝업 닫기",
+    "req": "Figma test · 543:8693",
+    "note": "추가 결제 없으면 바로 완료 · Figma PAY-302 중복 대지 대응",
     "type": "팝업"
   },
   "paperAdditional": {
     "label": "KIO-PAY-403 할인 쿠폰 사용 (추가 결제)",
-    "req": "IA·Figma v0.7",
-    "note": "5초 무응답 시 팝업 닫기",
+    "req": "Figma test · 543:8699",
+    "note": "잔액이 남으면 PAY-001, 없으면 바로 완료",
     "type": "팝업"
   },
   "cashPay": {
     "label": "KIO-PAY-501 현금결제",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+    "req": "Figma test · 기능 미제공",
+    "note": "현금 결제는 제공하지 않음",
     "type": "페이지"
   },
   "paymentComplete": {
@@ -104,32 +110,32 @@ window.CIW_SCREEN_CATALOG = {
   },
   "paymentCompleteWaiting": {
     "label": "KIO-CMP-002 결제완료 (세차중)",
-    "req": "IA·Figma v0.7",
-    "note": "미적용 (별도 정책 사용)",
+    "req": "Figma test · 543:8431",
+    "note": "앞차 세차 중 대기 안내",
     "type": "페이지"
   },
   "commonComplete": {
     "label": "KIO-CMP-003 세차권 사용 완료",
-    "req": "IA·Figma v0.7",
-    "note": "미적용 (별도 정책 사용)",
+    "req": "Figma test · 543:8460",
+    "note": "세차권 사용 완료 및 진입 안내",
     "type": "페이지"
   },
   "commonCompleteWaiting": {
     "label": "KIO-CMP-004 세차권 사용 완료 (세차중)",
-    "req": "IA·Figma v0.7",
-    "note": "미적용 (별도 정책 사용)",
+    "req": "Figma test · 543:8446",
+    "note": "세차권 사용 완료 · 앞차 세차 중 대기",
     "type": "페이지"
   },
   "receipt": {
     "label": "KIO-CMP-005 영수증 발급",
-    "req": "IA·Figma v0.7",
-    "note": "미적용 (별도 정책 사용)",
+    "req": "Figma test · 543:8690",
+    "note": "번호 검증 후 발급 · 성공 시 발급 버튼 숨김",
     "type": "팝업"
   },
   "receiptSent": {
     "label": "KIO-CMP-005A 영수증 발급 (성공)",
-    "req": "IA·Figma v0.7",
-    "note": "미적용 (별도 정책 사용)",
+    "req": "Figma test · 543:8684",
+    "note": "발송 완료 확인 후 완료 화면 복귀",
     "type": "Alert"
   },
   "autoWelcomeNonmember": {
@@ -176,8 +182,8 @@ window.CIW_SCREEN_CATALOG = {
   },
   "timeout": {
     "label": "KIO-COM-003 타임아웃",
-    "req": "IA·Figma v0.7",
-    "note": "미적용",
+    "req": "Figma test · 543:9395",
+    "note": "5초 카운트다운 · 처음으로 / 계속 이용",
     "type": "팝업"
   },
   "loading": {
@@ -194,8 +200,8 @@ window.CIW_SCREEN_CATALOG = {
   },
   "unavailable": {
     "label": "KIO-COM-006 세차 이용 불가",
-    "req": "IA·Figma v0.7",
-    "note": "미적용",
+    "req": "Figma test · 543:9069",
+    "note": "세차 이용 불가 · Figma COM-005 중복 대지 대응",
     "type": "페이지"
   },
   "error": {
@@ -206,14 +212,14 @@ window.CIW_SCREEN_CATALOG = {
   },
   "commonToast": {
     "label": "KIO-COM-008 공통 Toast",
-    "req": "IA·Figma v0.7",
-    "note": "미적용",
+    "req": "Figma test · 543:9444",
+    "note": "처리 완료 Toast",
     "type": "Toast"
   },
   "networkError": {
     "label": "KIO-COM-009 네트워크 오류",
-    "req": "IA·Figma v0.7",
-    "note": "미적용",
+    "req": "Figma test · 543:9071",
+    "note": "네트워크 연결 오류",
     "type": "페이지"
   },
   "ticketDone": {
@@ -230,8 +236,8 @@ window.CIW_SCREEN_CATALOG = {
   },
   "qrMismatch": {
     "label": "KIO-TQR-003 세차권 코스 불일치",
-    "req": "IA·Figma v0.7",
-    "note": "5초 무응답 시 팝업 닫기",
+    "req": "Figma test · 543:9465",
+    "note": "코스 불일치 안내 · 사용 안함 / 세차권 사용",
     "type": "팝업"
   },
   "adminLogin": {

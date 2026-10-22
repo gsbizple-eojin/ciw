@@ -1,5 +1,5 @@
 const catalog = Object.entries(window.CIW_SCREEN_CATALOG);
-const V07_TARGETS = new Set(["intro", "course", "courseInfo", "discountUse", "payment", "appPay", "mobileVoucher", "paperCoupon", "paymentComplete", "paymentCompleteWaiting", "commonComplete", "commonCompleteWaiting", "autoWelcomeNonmember", "autoWelcomeMember", "help", "adminHome", "adminSystem", "adminSaveConfirm", "networkError", "cashPay", "qrMismatch"]);
+const V07_TARGETS = new Set(["cardPayExternal", "receiptSent", "discountScan", "timeout", "commonToast", "unavailable", "receipt", "voucherUse", "voucherAdditional", "paperUse", "paperAdditional", "intro", "course", "courseInfo", "discountUse", "paymentMethods", "cardPay", "payment", "appPay", "mobileVoucher", "paperCoupon", "paymentComplete", "paymentCompleteWaiting", "commonComplete", "commonCompleteWaiting", "autoWelcomeNonmember", "autoWelcomeMember", "help", "adminHome", "adminSystem", "adminSaveConfirm", "networkError", "cashPay", "qrMismatch"]);
 const gallery = document.querySelector("#screenGallery");
 const summary = document.querySelector("#gallerySummary");
 const selectedHeight = new URLSearchParams(window.location.search).get("height") === "high" ? "high" : "low";
@@ -8,7 +8,7 @@ const FLOW_GROUPS = [
   ["인트로", ["intro"]],
   ["코스선택", ["course", "courseInfo"]],
   ["주유세차 할인", ["discountScan", "discountUse", "discountApplied"]],
-  ["결제수단선택", ["payment", "paymentMobileApplied", "paymentPaperApplied", "paymentDiscountMobileApplied"]],
+  ["결제수단선택", ["payment", "paymentMethods", "paymentMobileApplied", "paymentPaperApplied", "paymentDiscountMobileApplied"]],
   ["결제하기", ["cardPay", "cardPayExternal", "appPay", "mobileVoucher", "voucherUse", "voucherAdditional", "voucherError", "paperCoupon", "paperUse", "paperAdditional", "paperError", "cashPay"]],
   ["결제완료 / 영수증", ["paymentComplete", "paymentCompleteWaiting", "commonComplete", "commonCompleteWaiting", "receipt", "receiptError", "receiptSent"]],
   ["오토패스", ["autoWelcomeNonmember", "autoWelcomeMember", "autoSingle", "autoManual", "autoMultiple", "autoError"]],
@@ -29,7 +29,7 @@ function screenUrl(id, standalone = false) {
 }
 
 function updateSummary() {
-  summary.textContent = `총 ${catalog.length}개 화면 (기본 42개 + 완료 플로우 1개) · v0.7 변경·추가 ${V07_TARGETS.size}개 · ${selectedHeight === "low" ? "기본 화면 (세단)" : "높은 화면 (SUV)"}`;
+  summary.textContent = `총 ${catalog.length}개 화면 (기본 42개 + 결제수단 선택 1개 + 완료 플로우 1개) · v0.7 변경·추가 ${V07_TARGETS.size}개 · ${selectedHeight === "low" ? "기본 화면 (세단)" : "높은 화면 (SUV)"}`;
 }
 
 function renderGallery() {
