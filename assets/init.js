@@ -211,8 +211,15 @@ applyCompletionScreens();
 applyAutopassScreens();
 applyCommonScreens();
 applyAdminScreens();
+applyAdminBoScreens();
 applyV07Actions();
+applyFinalDesigns();
+applyRevisitScreens();
 // 두 HTML이 공유하는 카탈로그로 선택 목록을 한 번만 만든다.
 const v07Select=document.getElementById('screenSelect');
 if(v07Select){v07Select.innerHTML=Object.entries(screenMeta).map(([id,meta])=>`<option value="${id}">${meta.label}</option>`).join('');v07Select.value=state.screen;}
 render();
+
+
+// Review-only Figma course variants; transaction data remains unchanged.
+for(const id of ["courseDisplayVariant","courseInfoVariant"]){const select=document.getElementById(id);if(select){select.value=state[id];select.addEventListener("change",()=>{state[id]=select.value;render();});}}

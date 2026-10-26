@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="9.81973" height="12.6169" viewBox="0 0 9.81973 12.6169" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="LED &#235;&#160;&#140;&#236;&#166;&#136; &#235;&#178;&#160;&#236;&#160;&#164;">
+<use xlink:href="#stroke0_0_386" fill="url(#paint0_linear_0_386)"/>
+<mask id="stroke1_0_386" fill="white">
+<use xlink:href="#stroke0_0_386"/>
+</mask>
+<path d="M1.96395 0H7.85579C8.94044 0 9.81973 0.891909 9.81973 1.99213V10.6247C9.81973 11.7249 8.94044 12.6169 7.85579 12.6169H1.96395C0.879289 12.6169 0 11.7249 0 10.6247V1.99213C0 0.891909 0.879289 0 1.96395 0Z" stroke-width="0.904605" stroke="#060C17" mask="url(#stroke1_0_386)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_386" x1="4.90987" y1="0" x2="4.90987" y2="12.6169" gradientUnits="userSpaceOnUse">
+<stop stop-color="#263650"/>
+<stop offset="1" stop-color="#06101E"/>
+</linearGradient>
+<path id="stroke0_0_386" d="M1.96395 0H7.85579C8.94044 0 9.81973 0.891909 9.81973 1.99213V10.6247C9.81973 11.7249 8.94044 12.6169 7.85579 12.6169H1.96395C0.879289 12.6169 0 11.7249 0 10.6247V1.99213C0 0.891909 0.879289 0 1.96395 0Z"/>
+</defs>
+</svg>

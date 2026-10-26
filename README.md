@@ -2,13 +2,17 @@
 
 Figma `(작업용) v0.7`의 세로형 기본 화면을 기준으로 한다. 기본 IA 42개와 분리된 PAY-002, 결제완료 흐름용 CMP-001을 포함해 44개 화면을 제공한다.
 
-- 높은 화면의 결제·결제완료 배치는 사용자 지정 [(sample) PAY-001](https://www.figma.com/design/rpAk7c9wxxP5rAcrgPLy3l?node-id=910-12184) 및 [(sample) CMP-001](https://www.figma.com/design/rpAk7c9wxxP5rAcrgPLy3l?node-id=887-13979)을 따른다. 결제 영역 상단 여백 120px, 기능 버튼 1100px, 상태 정보 1204px, 하단 광고 640px로 배치한다.
+- 높은 화면의 결제·결제완료 배치는 사용자 지정 [(sample) PAY-001](https://www.figma.com/design/rpAk7c9wxxP5rAcrgPLy3l?node-id=910-12184) 및 [(sample) CMP-001](https://www.figma.com/design/rpAk7c9wxxP5rAcrgPLy3l?node-id=887-13979)을 따른다. 결제 영역 상단 여백 80px, 기능 버튼 1100px, 상태 정보 1204px, 하단 광고 640px로 배치한다.
 
-- 최신 인트로: 세로형 [KIO-INT-001 · 887:11933](https://www.figma.com/design/rpAk7c9wxxP5rAcrgPLy3l?node-id=887-11933), 가로형 [KIO-INT-001-W · 887:13589](https://www.figma.com/design/rpAk7c9wxxP5rAcrgPLy3l?node-id=887-13589). 기능 번호 주석은 제외하고 원본 자산·안내 문구·정보 영역을 반영했다. 세로형 차종 선택과 QR 인식, 가로형 화면 터치 시작·숨김 관리자 진입을 제공한다.
+- 최신 인트로: 세로형 [KIO-INT-001 · 589:12484](https://www.figma.com/design/KO0UT5heAXBbCxCTFSnQ6U?node-id=589-12484), 가로형 [KIO-INT-001-W · 887:13589](https://www.figma.com/design/rpAk7c9wxxP5rAcrgPLy3l?node-id=887-13589). 기능 번호 주석은 제외하고 원본 자산·안내 문구·정보 영역을 반영했다. 세로형 차종 선택과 QR 인식, 가로형 화면 터치 시작·숨김 관리자 진입을 제공한다.
+
+## 최종 디자인 업데이트 — 2026-10-26
+
+1차 19개에 이어 2차 7개 화면을 갱신했다. v1·v2는 상태별 시안으로 적용했다. 현재 보류: AUT-001~005, 중복·오표기 CMP-002·PAY-302·CMP-005·ADM-001·COM-001. [반영 화면·대지 목록](DESIGN_UPDATE_2026-10-26.md)을 참고한다. 기존 기능과 이동은 유지한다.
 
 ## 실행
 
-- 코스 선택 `screen/KIO-CRS-001`은 최신 [test 페이지 대지 557:17026](https://www.figma.com/design/KO0UT5heAXBbCxCTFSnQ6U?node-id=557-17026)에 맞춰 카드 반사 효과·상단 글자·안내 배너·하단 버튼을 재반영했다. 할인권 등록 팝업은 이 코스 선택 화면 위에서 열린다.
+- 코스 선택 `screen/KIO-CRS-001`은 최신 [최종 디자인 업데이트 대지 589:14114](https://www.figma.com/design/KO0UT5heAXBbCxCTFSnQ6U?node-id=589-14114)에 맞춰 카드 반사 효과·상단 글자·안내 배너·하단 버튼을 재반영했다. 할인권 등록 팝업은 이 코스 선택 화면 위에서 열린다.
 
 - [index.html](index.html): 조작 가능한 프로토타입. 브라우저에서 직접 열면 된다.
 - [전체화면 HTML](CIW_차세대_키오스크_전체화면_v0.7.html): 44개 화면 모아보기.
@@ -31,6 +35,8 @@ Figma `(작업용) v0.7`의 세로형 기본 화면을 기준으로 한다. 기�
 | 공통 상태·금액 계산·이동·버튼 동작 | `assets/app.js` |
 | 화면 등록·초기 실행·이벤트 연결 | `assets/init.js` |
 | 유효성 검사 메시지·검토 조작 | `assets/validation.js` |
+| 최종 디자인 2차 7개·상태 시안 | `assets/screens/revisit.js`, `assets/screens/revisit-templates.js` |
+| 최종 디자인 1차 19개 | `assets/screens/final-design.js`, `assets/screens/final-design-templates.js` |
 | 프로토타입 디자인 | `assets/styles.css` — 화면별 주석·클래스로 검색 |
 | 전체화면 모아보기 | `assets/all-screens.js`, `assets/all-screens.css` |
 | 이미지·아이콘 원본 | `assets/images/` |
@@ -139,3 +145,22 @@ Figma `(작업용) v0.7`의 세로형 기본 화면을 기준으로 한다. 기�
 - 관리자 예시 비밀번호는 `1234`이며 장치·결제 연동은 시뮬레이션이다. 상세 조건은 IA 문서에 기록한다.
 
 - 최신 재반영: 코스 선택 `557:17026`의 배경 자산·하단 이용안내와 높이, 가로형 할인수단 `543:8723`의 동일 폭 3버튼, 결제수단 `543:8762`의 현금·앱 상단 / 카드 하단 배치를 적용했다. 가로형 v1 결제수단 대지 대신 정식 PAY-002-W 대지를 사용한다.
+
+## 높은 화면 공통 배치
+
+- PAY-001 / CMP-001 샘플의 배치를 코스 선택·할인·결제·스캔·완료 흐름에 공통 적용한다.
+- 본문 상단 기준은 80px이며 코스 선택은 카드·QR 배너가 함께 들어가도록 간격을 조정한다.
+- 기능 버튼은 1100~1204px, 상태 정보는 1204~1276px, 광고는 1280~1920px에 배치한다.
+- 할인·상품권·쿠폰·영수증 팝업은 상단 1100px 영역을 기준으로 가운데 배치하되, 배경 차단은 화면 전체를 덮는다. 코스 안내는 상단 영역 안에서 필요 시 스크롤한다.
+- 인트로의 높이 선택 전 화면, 관리자 및 가로형 화면은 이 높은 화면 배치 변경에 포함하지 않는다.
+
+## 관리자 디자인 — 2026-10-26
+
+- `kio-bo` (594:17521) → 기존 관리자 키오스크 설정 탭.
+- `kio-bo2` (594:17578) → 기존 관리자 세차기 관리 탭.
+- `assets/screens/admin-bo.js`와 `admin-bo-templates.js`에서 관리. 기능 번호 주석은 제외.
+- 최신 1920px 대지의 상단 탭·행 간격·설정 열 높이·하단 버튼 위치를 재반영했다. 두 화면 모두 스크롤 없이 조작부 전체를 표시한다. 드롭다운 5개, 입력 10개, 토글 9개, 버튼·탭·나가기 및 탭 간 값 유지를 검증했다. 화면 내 저장 안내만 제공하며 장비 제어·서버 저장은 연결하지 않는다. 변경값은 현재 페이지에서만 유지된다.
+
+## 2차 디자인 상태 검토
+
+왼쪽 ‘코스 디자인 상태 · 검토용’에서 코스 선택 4/2/1개 및 코스 안내 기본/v1/v2를 바꿀 수 있다. 할인 적용·선택 불가·다음 버튼은 기존 거래 상태를 따른다. 자세한 화면별 대지와 보류 사유는 [반영 내역](DESIGN_UPDATE_2026-10-26.md)의 2차 표를 참고한다.

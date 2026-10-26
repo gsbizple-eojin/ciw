@@ -1,50 +1,49 @@
-// 세로형 기본 IA 42개 + 완료 플로우용 CMP-001 1개. W/v1/v2는 포함하지 않는다.
-window.CIW_SCREEN_CATALOG = {
+window.CIW_SCREEN_CATALOG={
   "intro": {
     "label": "KIO-INT-001 인트로",
-    "req": "IA·Figma v0.7",
-    "note": "최신 인트로 디자인 적용 · 차종별 화면 높이 선택 및 QR 인식",
+    "req": "최종 디자인 업데이트 · 589:12484",
+    "note": "차종별 높이 선택·QR 인식·관리자 진입 유지",
     "type": "페이지"
   },
   "course": {
     "label": "KIO-CRS-001 코스 선택",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+    "req": "최종 디자인 업데이트 · 589:14114",
+    "note": "v1(589:12572) 2개 / v2(589:12590) 1개 코스 상태 시안 포함",
     "type": "페이지"
   },
   "courseInfo": {
     "label": "KIO-CRS-002 세차코스 설명",
-    "req": "IA·Figma v0.7",
-    "note": "5초 무응답 시 팝업 닫기",
+    "req": "최종 디자인 업데이트 · 589:22138",
+    "note": "v1(589:22249)·v2(589:22335) 코스 구성·강조 시안 포함",
     "type": "팝업"
   },
   "discountScan": {
     "label": "KIO-DSC-001 세차 할인권 등록",
-    "req": "Figma test · 543:8678",
+    "req": "최종 디자인 업데이트 · 589:12671",
     "note": "코스 선택 위 팝업 · 왼쪽 사용 / 오른쪽 사용 안함",
     "type": "팝업"
   },
   "discountUse": {
     "label": "KIO-DSC-002 세차 할인권 사용",
-    "req": "Figma test · 543:8341",
+    "req": "최종 디자인 업데이트 · 589:12342",
     "note": "바코드 인식 후 할인 적용",
     "type": "페이지"
   },
   "payment": {
     "label": "KIO-PAY-001 할인 및 보조 결제수단 선택",
-    "req": "IA·Figma v0.7",
-    "note": "30초 무응답 시 <타임아웃> 팝업 노출",
+    "req": "최종 디자인 업데이트 · 589:22010",
+    "note": "v1(589:21988) 적용·선택 불가 상태 / 실제 적용 여부·계산값 반영",
     "type": "페이지"
   },
   "paymentMethods": {
     "label": "KIO-PAY-002 결제수단 선택",
-    "req": "Figma test · 543:8660",
+    "req": "최종 디자인 업데이트 · 589:22032",
     "note": "이전으로: 할인 및 보조 결제수단 선택으로 복귀",
     "type": "페이지"
   },
   "cardPay": {
     "label": "KIO-PAY-101 카드결제",
-    "req": "IA·Figma v0.7",
+    "req": "최종 디자인 업데이트 · 589:12406",
     "note": "30초 무응답 시 <타임아웃> 팝업 노출",
     "type": "페이지"
   },
@@ -56,13 +55,13 @@ window.CIW_SCREEN_CATALOG = {
   },
   "appPay": {
     "label": "KIO-PAY-201 컴인워시 앱 결제",
-    "req": "Figma test · 543:8356",
+    "req": "최종 디자인 업데이트 · 589:12358",
     "note": "앱 바코드 인식 후 결제 완료",
     "type": "페이지"
   },
   "mobileVoucher": {
     "label": "KIO-PAY-301 모바일 상품권 결제",
-    "req": "Figma test · 543:8371",
+    "req": "최종 디자인 업데이트 · 589:12374",
     "note": "상품권 인식 후 사용 확인",
     "type": "페이지"
   },
@@ -74,13 +73,13 @@ window.CIW_SCREEN_CATALOG = {
   },
   "voucherAdditional": {
     "label": "KIO-PAY-303 모바일 상품권 사용 (추가결제)",
-    "req": "Figma test · 543:8696",
+    "req": "최종 디자인 업데이트 · 589:12689",
     "note": "잔액이 남으면 PAY-001, 없으면 바로 완료",
     "type": "팝업"
   },
   "paperCoupon": {
     "label": "KIO-PAY-401 할인 쿠폰 결제",
-    "req": "Figma test · 543:8386",
+    "req": "최종 디자인 업데이트 · 589:12390",
     "note": "쿠폰 인식 후 사용 확인",
     "type": "페이지"
   },
@@ -92,7 +91,7 @@ window.CIW_SCREEN_CATALOG = {
   },
   "paperAdditional": {
     "label": "KIO-PAY-403 할인 쿠폰 사용 (추가 결제)",
-    "req": "Figma test · 543:8699",
+    "req": "최종 디자인 업데이트 · 589:12692",
     "note": "잔액이 남으면 PAY-001, 없으면 바로 완료",
     "type": "팝업"
   },
@@ -104,8 +103,8 @@ window.CIW_SCREEN_CATALOG = {
   },
   "paymentComplete": {
     "label": "KIO-CMP-001 결제완료",
-    "req": "IA·Figma v0.7",
-    "note": "Figma의 대기 상태 CMP-002 중복 프레임을 완료 플로우로 연결. ID 확인 필요.",
+    "req": "최종 디자인 업데이트 · 589:12422",
+    "note": "영수증 발급 후 버튼 숨김 유지",
     "type": "페이지"
   },
   "paymentCompleteWaiting": {
@@ -116,7 +115,7 @@ window.CIW_SCREEN_CATALOG = {
   },
   "commonComplete": {
     "label": "KIO-CMP-003 세차권 사용 완료",
-    "req": "Figma test · 543:8460",
+    "req": "최종 디자인 업데이트 · 589:12469",
     "note": "세차권 사용 완료 및 진입 안내",
     "type": "페이지"
   },
@@ -134,7 +133,7 @@ window.CIW_SCREEN_CATALOG = {
   },
   "receiptSent": {
     "label": "KIO-CMP-005A 영수증 발급 (성공)",
-    "req": "Figma test · 543:8684",
+    "req": "최종 디자인 업데이트 · 589:12677",
     "note": "발송 완료 확인 후 완료 화면 복귀",
     "type": "Alert"
   },
@@ -182,61 +181,61 @@ window.CIW_SCREEN_CATALOG = {
   },
   "timeout": {
     "label": "KIO-COM-003 타임아웃",
-    "req": "Figma test · 543:9395",
+    "req": "최종 디자인 업데이트 · 589:13429",
     "note": "5초 카운트다운 · 처음으로 / 계속 이용",
     "type": "팝업"
   },
   "loading": {
     "label": "KIO-COM-004 로딩",
-    "req": "IA·Figma v0.7",
+    "req": "최종 디자인 업데이트 · 589:13084",
     "note": "미적용",
     "type": "페이지"
   },
   "maintenance": {
     "label": "KIO-COM-005 점검 중",
-    "req": "IA·Figma v0.7",
-    "note": "미적용",
+    "req": "최종 디자인 업데이트 · 589:13088",
+    "note": "동일 ID가 하나로 정리되어 최신 디자인 적용",
     "type": "페이지"
   },
   "unavailable": {
     "label": "KIO-COM-006 세차 이용 불가",
-    "req": "Figma test · 543:9069",
-    "note": "세차 이용 불가 · Figma COM-005 중복 대지 대응",
+    "req": "최종 디자인 업데이트 · 589:13090",
+    "note": "별도 ID 확인 후 최신 디자인 적용",
     "type": "페이지"
   },
   "error": {
     "label": "KIO-COM-007 공통 alert",
-    "req": "IA·Figma v0.7",
+    "req": "최종 디자인 업데이트 · 589:12680",
     "note": "30초 무응답 시 <타임아웃> 팝업 노출",
     "type": "Alert"
   },
   "commonToast": {
     "label": "KIO-COM-008 공통 Toast",
-    "req": "Figma test · 543:9444",
+    "req": "최종 디자인 업데이트 · 589:13481",
     "note": "처리 완료 Toast",
     "type": "Toast"
   },
   "networkError": {
     "label": "KIO-COM-009 네트워크 오류",
-    "req": "Figma test · 543:9071",
+    "req": "최종 디자인 업데이트 · 589:13092",
     "note": "네트워크 연결 오류",
     "type": "페이지"
   },
   "ticketDone": {
     "label": "KIO-TQR-001 세차권 인식 (성공)",
-    "req": "IA·Figma v0.7",
+    "req": "최종 디자인 업데이트 · 589:13484",
     "note": "미적용",
     "type": "Toast"
   },
   "qrGuide": {
     "label": "KIO-TQR-002 세차권 QR 사용 안내",
-    "req": "IA·Figma v0.7",
+    "req": "최종 디자인 업데이트 · 589:13499",
     "note": "5초 무응답 시 팝업 닫기",
     "type": "팝업"
   },
   "qrMismatch": {
     "label": "KIO-TQR-003 세차권 코스 불일치",
-    "req": "Figma test · 543:9465",
+    "req": "최종 디자인 업데이트 · 589:13502",
     "note": "코스 불일치 안내 · 사용 안함 / 세차권 사용",
     "type": "팝업"
   },
@@ -248,14 +247,14 @@ window.CIW_SCREEN_CATALOG = {
   },
   "adminHome": {
     "label": "KIO-ADM-002 키오스크 설정",
-    "req": "IA·Figma v0.7",
-    "note": "미적용 (화면 설명 명시)",
+    "req": "Figma kio-bo · 594:17521",
+    "note": "버튼·입력·드롭다운·토글 조작 시안, 실제 장비 및 서버 미연동",
     "type": "페이지"
   },
   "adminSystem": {
-    "label": "KIO-ADM-003 시스템 설정",
-    "req": "IA·Figma v0.7",
-    "note": "미적용 (관리자 설정 공통 적용; 개별 설명 미명시)",
+    "label": "KIO-ADM-003 세차기 관리",
+    "req": "Figma kio-bo2 · 594:17578",
+    "note": "코스 선택·장비 제어 버튼 시안, 실제 장비 미연동",
     "type": "페이지"
   },
   "adminSaveConfirm": {
