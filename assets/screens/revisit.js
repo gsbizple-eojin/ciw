@@ -24,7 +24,9 @@ function applyRevisitScreens(){
   const id=state.courseDisplayVariant==='v1'?'589:12572':state.courseDisplayVariant==='v2'?'589:12590':'589:14114',root=template(id);
   root.querySelectorAll('[data-rv-course]').forEach(e=>{const course=courses.find(c=>c.id===e.dataset.rvCourse);if(!course)return;bind(e,'select-course',{course:course.id});const price=[...e.querySelectorAll('p')].find(p=>/[0-9,]+원/.test(p.textContent));if(price)price.textContent=formatPrice(course.price);});
   label(root,'세차 코스 안내','course-info');bind(root.querySelector('[data-name="app banner_bg_gray_character"]')?.parentElement,'v07-qr');
-  return root.outerHTML+adminEntryHotspot()+overlay;
+  // Keep course dialogs inside their positioned screen so the existing overlay styles apply.
+  root.classList.add('ciw-design');root.insertAdjacentHTML('beforeend',overlay);
+  return root.outerHTML+adminEntryHotspot();
  };
  const oldInfo=renderers.courseInfo;
  renderers.courseInfo=()=>{

@@ -223,3 +223,6 @@ render();
 
 // Review-only Figma course variants; transaction data remains unchanged.
 for(const id of ["courseDisplayVariant","courseInfoVariant"]){const select=document.getElementById(id);if(select){select.value=state[id];select.addEventListener("change",()=>{state[id]=select.value;render();});}}
+
+const adminLayoutSelect=document.getElementById("adminLayout");
+if(adminLayoutSelect){adminLayoutSelect.value=state.adminLayout;adminLayoutSelect.addEventListener("change",()=>{state.adminLayout=adminLayoutSelect.value;render();});}

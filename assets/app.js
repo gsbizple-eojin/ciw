@@ -426,6 +426,7 @@ const state = {
   height: params.get("height") === "high" ? "high" : "low",
   selectedCourse: courses[2],
   courseDisplayVariant: params.get("courseVariant") || "base",
+  adminLayout: params.get("adminLayout") === "v2" ? "v2" : "original",
   courseInfoVariant: params.get("infoVariant") || "base",
   selectedPayment: "card",
   discountApplied: params.get("screen") === "discountApplied",
@@ -892,6 +893,7 @@ function updateReviewPanel() {
   url.searchParams.set("embed", "1");
   url.searchParams.set("screen", state.screen);
   url.searchParams.set("height", state.height);
+  if(state.adminLayout === "v2") url.searchParams.set("adminLayout", "v2");
   document.getElementById("embedLink").href = url.toString();
 }
 

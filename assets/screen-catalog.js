@@ -247,8 +247,8 @@ window.CIW_SCREEN_CATALOG={
   },
   "adminHome": {
     "label": "KIO-ADM-002 키오스크 설정",
-    "req": "Figma kio-bo · 594:17521",
-    "note": "버튼·입력·드롭다운·토글 조작 시안, 실제 장비 및 서버 미연동",
+    "req": "Figma kio-bo · 594:17521 / kio-bo v2 · 606:8452",
+    "note": "왼쪽 관리자 레이아웃 선택으로 기존·v2 비교 / 두 버전의 입력값은 별도 유지 / 실제 장비 미연동",
     "type": "페이지"
   },
   "adminSystem": {
